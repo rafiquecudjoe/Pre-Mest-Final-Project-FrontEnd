@@ -1,0 +1,91 @@
+.main_container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: aquamarine;
+  height: 100vh;
+}
+
+.left {
+  display: flex;
+  background-color: yellow;
+  flex: 0.3;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  background-color: transparent;
+  flex: 0.7;
+  flex-direction: column;
+}
+
+.righttop {
+  display: flex;
+  background-color: brown;
+  flex: 0.1;
+}
+
+.rightbottom {
+  display: flex;
+  background-color: transparent;
+  flex: 0.9;
+  flex-direction: column;
+}
+
+.cardtop {
+  display: flex;
+  background-color: transparent;
+  flex: 0.5;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cardbottom {
+  display: flex;
+  background-color: transparent;
+  flex: 0.5;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  background-color: hotpink;
+  box-shadow: 2px -2px 5px 5px #111;
+  border-radius: 5px;
+}
+
+.branddiv {
+  display: flex;
+  background-color: khaki;
+  justify-content: space-evenly;
+  flex: 0.1;
+}
+
+.menudiv {
+  display: flex;
+  flex: 0.8;
+  background-color: lightslategrey;
+}
+
+.signoutdiv {
+  display: flex;
+  flex: 0.1;
+  background-color: red;
+}
+
+.img{
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.logotext{
+  text-align: center;
+  justify-content: center;
+  
+}
