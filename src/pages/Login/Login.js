@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pic from "./img/login.svg";
+
 import pic3 from "./img/avatar.svg";
 import pic4 from "./img/authen.svg";
 import Mycss from "./login.module.css";
@@ -42,8 +42,11 @@ function Login() {
 
   return (
     <>
+      
+    
       <img className={Mycss.wave} src={pic4}></img>
       <div className={Mycss.container}>
+        
         <div className={Mycss.img}></div>
         <div className={Mycss.login_content}>
           <form className={Mycss.form_control}>
@@ -77,6 +80,7 @@ function Login() {
             </div>
 
             <a href="#">Forgot Password?</a>
+            <a href="/signup">Dont Have an Account, Sign Up?</a>
 
             <Button
               className=""
@@ -84,6 +88,8 @@ function Login() {
               // onClick={() => gotoPage("/Signup")}
               text="Login"
             />
+           
+            
           </form>
         </div>
       </div>

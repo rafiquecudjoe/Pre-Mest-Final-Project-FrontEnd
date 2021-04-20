@@ -21,7 +21,7 @@ const Banner = () => {
       <div className={Bannercss.nav}>
         <div className={Bannercss.logo}></div>
               <div className={Bannercss.menulinks}>
-                  <a  href="#">HOME</a>
+                  <a  href="/">HOME</a>
                   <a href="#">PRICING</a>
                   <a href="#">TRACKING</a>
                   <a href="#">ABOUT</a>
@@ -38,7 +38,7 @@ const Banner = () => {
       <div className={Bannercss.main}>
         <div className={Bannercss.text_container}>
           <p className={Bannercss.uppertext}>
-            Package Delivery for as low at Gh5.00
+            Package Delivery for as low at Ghc5.00
           </p>
           <p className={Bannercss.downtext}>
             Send parcels door to door for low flat-rates, <br></br>across Kumasi

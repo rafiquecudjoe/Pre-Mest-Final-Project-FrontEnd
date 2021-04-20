@@ -105,6 +105,7 @@ function Signup() {
             </div>
 
             <a href="#">Forgot Password?</a>
+            <a href="/login">Already have an Account? Login</a>
 
             <Button className="" onClick={signup} text="Signup" />
           </form>
