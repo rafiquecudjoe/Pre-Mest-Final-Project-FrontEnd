@@ -72,7 +72,7 @@
 .logo {
   display: flex;
   flex: 0.15;
-  background-image: url("./img/ex.png");
+  /* background-image: url("./img/ex.png"); */
   background-size: 100% 100%;
 }
 

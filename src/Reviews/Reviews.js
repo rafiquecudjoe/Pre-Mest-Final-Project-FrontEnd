@@ -10,19 +10,19 @@ const Reviews = () => {
   return (
     <div className={Reviewcss.main}>
       <div className={Reviewcss.maintext}>
-        <h1>
+        <h2>
           Customer Stories
           <br />
-        </h1>
+        </h2>
         <p>Hundreds of Kumasi businesses are using Express Delivery</p>
       </div>
       <div className={Reviewcss.mainreview}>
         <div className={Reviewcss.reviewcard1}>
           <div className={Reviewcss.img1}>
-          <img src={jane1} alt="john" height="100%" width="100%"/>
+          {/* <img src={jane1} alt="john" height="100%" width="100%"/> */}
           </div>
           <div className={Reviewcss.text1}>
-            <p>
+            <em>
               "What works for us is that it's <br />
               simple, it's integrated into our
               <br />
@@ -30,16 +30,16 @@ const Reviews = () => {
               <br />
               reliable and the value <br />
               proposition stacks up." <br />
-            </p>
+            </em>
             <p className="name">Samuel Kwofie</p>
           </div>
         </div>
         <div className={Reviewcss.reviewcard2}>
           <div className={Reviewcss.img2}>
-          <img src={ema1} alt="rex" height="100%" width="100%"/>
+          {/* <img src={ema1} alt="rex" height="100%" width="100%"/> */}
           </div>
           <div className={Reviewcss.text2}>
-            <p className="rtext">
+            <em className="rtext">
               "Express Deliveries shipping rates <br />
               are really competitive, sending
               <br />
@@ -49,17 +49,17 @@ const Reviews = () => {
               <br />
               minute per order, which is huge!"
               <br />
-            </p>
+            </em>
 
             <p className="name"> John Mensah</p>
           </div>
         </div>
         <div className={Reviewcss.reviewcard3}>
           <div className={Reviewcss.img3}>
-            <img src={bismark} alt="hannah" height="80%" width="100%"/>
+            {/* <img src={bismark} alt="hannah" height="100%" width="100%"/> */}
           </div>
           <div className={Reviewcss.text3}>
-            <p>
+            <em>
               "Expess Delivery streamlines the
               <br />
               whole delivery experience.
@@ -73,7 +73,7 @@ const Reviews = () => {
               <br />
               so good for our business!"
               <br />
-            </p>
+            </em>
             <p className="name">Felix Kwofie</p>
           </div>
         </div>

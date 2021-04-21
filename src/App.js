@@ -11,6 +11,8 @@ import { MyProvider } from "./store/Context";
 import Navbar from "./components/appcomponents/Navbar";
 import Reviews from "./Reviews/Reviews";
 import LandingPage from "./LandingPage";
+import Features from "./Features/Features"
+import FAQ from "./F.A.Q/FAQ"
 import "./App.css";
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         
 
         <Switch>
+          <Route exact path="/faq" component={FAQ}/>
+          <Route exact path="/features" component={Features}/>
           <Route exact path="/" component={LandingPage}/>
           <Route exact path="/banner" component={Banner} />
           <Route exact path="/nav" component={Navbar} />

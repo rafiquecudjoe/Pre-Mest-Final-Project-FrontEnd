@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.uppertext{
+    display: flex;
+    flex: 0.1;
+    background-color: darkred;
+   
+}
+
+.maintext{
+    display: flex;
+    flex: 0.9;
+    flex-direction: row;
+    background-color: darksalmon;
+}
+
+
+/* .leftmenu{
+    display: flex;
+    flex: 0.2;
+    background-color: green;
+} 
+
+.inputcontainer{
+    display: flex;
+    flex: 0.8;
+    background-color: orange;
+   
+}  */
+
+/* .uppertext{
+    display: flex;
+    flex: 0.2;
+    background-color: darkblue;
+}
+
+.lowertext{
+    flex: 0.8;
+    display: flex;
+    background-color: darkorchid;
+} */

@@ -1,38 +1,36 @@
 import Bannercss from "../Banner/Banner.module.css";
 import Delimage from "./img/Banner.svg";
 import Button from "../../components/appcomponents/button";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
+import expresslogo from "./img/expresslogo.png"
 
 const Banner = () => {
+  const history = useHistory();
 
+  const lg = () => {
+    history.push("/login");
+  };
 
-    const history = useHistory();
-
-    const lg = () => {
-        history.push('/login')
-    }
-
-    const sg = () => {
-         history.push('/signup')
-     }
+  const sg = () => {
+    history.push("/signup");
+  };
 
   return (
     <div className={Bannercss.maindiv}>
       <div className={Bannercss.nav}>
-        <div className={Bannercss.logo}></div>
-              <div className={Bannercss.menulinks}>
-                  <a  href="/">HOME</a>
-                  <a href="#">PRICING</a>
-                  <a href="#">TRACKING</a>
-                  <a href="#">ABOUT</a>
-                  <a href="#">CONTACT US</a>
-                      
-                  
-                  
+        <div className={Bannercss.logo}>
+          <img src={expresslogo} alt="logo" height="100%" width="100%"/>
         </div>
-              <div className={Bannercss.navbuttons}>
-                  <Button text="LOGIN" onClick={lg}/>
-                  <Button text="SIGNUP" onClick={sg }/>
+        <div className={Bannercss.menulinks}>
+          <a href="/">HOME</a>
+          <a href="#">PRICING</a>
+          <a href="#">TRACKING</a>
+          <a href="#">ABOUT</a>
+          <a href="#">CONTACT US</a>
+        </div>
+        <div className={Bannercss.navbuttons}>
+          <Button text="LOGIN" onClick={lg} />
+          <Button text="SIGNUP" onClick={sg} />
         </div>
       </div>
       <div className={Bannercss.main}>
