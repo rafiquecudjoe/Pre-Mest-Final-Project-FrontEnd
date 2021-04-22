@@ -31,7 +31,9 @@
   display: flex;
   flex: 0.19;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 70px;
+  
   
 }
 

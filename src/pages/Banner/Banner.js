@@ -43,7 +43,7 @@ const Banner = () => {
             and around the Country.
           </p>
 
-          <Button text="GET STARTED" />
+          <Button text="GET STARTED" onClick={sg} />
         </div>
 
         <div className={Bannercss.image_container}>

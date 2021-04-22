@@ -12,11 +12,11 @@ button {
   padding: 10px 20px;
   margin: 5px;
   border: none;
-  color: rgb(22, 21, 21);
+  /* color: rgb(22, 21, 21); */
   font-weight: 700;
   cursor: pointer;
   border-radius: 5px;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 nav {

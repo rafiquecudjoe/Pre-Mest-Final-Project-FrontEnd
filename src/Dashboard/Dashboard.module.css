@@ -9,7 +9,7 @@
 .uppertext{
     display: flex;
     flex: 0.1;
-    background-color: darkred;
+    background-color:blueviolet;
    
 }
 
@@ -21,7 +21,7 @@
 }
 
 
-/* .leftmenu{
+.leftmenu{
     display: flex;
     flex: 0.2;
     background-color: green;
@@ -31,17 +31,32 @@
     display: flex;
     flex: 0.8;
     background-color: orange;
+    flex-direction: column;
    
-}  */
+}  
 
-/* .uppertext{
+ .inputtext1{
     display: flex;
     flex: 0.2;
-    background-color: darkblue;
-}
+    background-color: red;
+} 
 
-.lowertext{
+.inputtext2{
     flex: 0.8;
     display: flex;
-    background-color: darkorchid;
-} */
+    background-color: white;
+} 
+
+
+.text{
+    display: flex;
+    flex: 0.60;
+    background-color: seagreen;
+}
+
+.image{
+    display: flex;
+    flex: 0.40;
+    background-color: skyblue;
+}
+
