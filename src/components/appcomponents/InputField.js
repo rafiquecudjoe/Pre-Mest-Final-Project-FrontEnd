@@ -5,7 +5,7 @@
 function InputField(props) {
     return (
         <>
-            <input
+            <input style={props.style}
                 placeholder={props.placeholder}
                 className={props.className}
                 type={props.type}

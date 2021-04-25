@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.uppertext {
+  display: flex;
+  flex: 0.1;
+  flex-direction: row;
+}
+
+.maintext {
+  display: flex;
+  flex: 0.9;
+  flex-direction: row;
+  /* background-color: darksalmon; */
+  justify-content: space-between;
+}
+
+.leftmenu {
+  display: flex;
+  flex: 0.2;
+  /* background-color: green; */
+  justify-content: flex-start;
+  background: rgb(249, 248, 247);
+}
+
+.inputcontainer {
+  display: flex;
+  flex: 0.77;
+
+  flex-direction: column;
+}
+
+.inputtext1 {
+  display: flex;
+  flex: 0.2;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputtext2 {
+  flex: 0.8;
+  display: flex;
+
+  flex-direction: row;
+  background: rgb(249, 248, 247);
+  text-align: center;
+}
+
+.text2 {
+  display: flex;
+  flex: 0.5;
+  flex-direction: column;
+  text-align: center;
+}
+
+.img2 {
+  display: flex;
+  flex: 0.5;
+}
+
+.leftmenu a {
+  margin: 30px;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.img {
+  display: flex;
+  flex: 0.2;
+}
+
+.search {
+  display: flex;
+  flex: 0.4;
+  
+  align-items: center;
+}
+
+.account {
+  display: flex;
+  flex: 0.4;
+
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+.text5 {
+  display: flex;
+  flex: 0.7;
+
+  font-family: "Open Sans", sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.buttons {
+  display: flex;
+  flex: 0.3;
+  justify-content: space-evenly;
+}
+
+.leftmenu img {
+  margin-right: 10px;
+}
+
+.welcom {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.this {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.we {
+  text-align: left;
+}
+
+.leftmenu li a {
+  text-align: left;
+}
+
+.inputtext1 textarea {
+  font-family: "Open Sans", sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: large;
+  border: none;
+}
+
+.text5 h2 {
+  margin-right: 80px;
+}

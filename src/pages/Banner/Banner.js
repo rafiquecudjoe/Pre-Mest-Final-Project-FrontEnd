@@ -1,8 +1,7 @@
 import Bannercss from "../Banner/Banner.module.css";
-import Delimage from "./img/Banner.svg";
 import Button from "../../components/appcomponents/button";
 import { useHistory } from "react-router-dom";
-import expresslogo from "./img/expresslogo.png"
+import expresslogo from "./img/expresslogo2.png"
 
 const Banner = () => {
   const history = useHistory();
@@ -29,8 +28,15 @@ const Banner = () => {
           <a href="#">CONTACT US</a>
         </div>
         <div className={Bannercss.navbuttons}>
-          <Button text="LOGIN" onClick={lg} />
-          <Button text="SIGNUP" onClick={sg} />
+          <Button style={{
+            width: "45%",
+            height: "50px"
+          }} className="btn" text="LOGIN" onClick={lg} />
+          <Button
+            style={{
+              width: "45%",
+              height: "50px"
+            }} className="btn" text="SIGNUP" onClick={sg} />
         </div>
       </div>
       <div className={Bannercss.main}>
@@ -43,7 +49,11 @@ const Banner = () => {
             and around the Country.
           </p>
 
-          <Button text="GET STARTED" onClick={sg} />
+          <Button style={{
+            width: "30%",
+            height: "50px"
+          }} 
+            className="btn" text="GET STARTED" onClick={sg} />
         </div>
 
         <div className={Bannercss.image_container}>

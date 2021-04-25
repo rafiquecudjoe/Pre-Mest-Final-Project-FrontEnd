@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 * {
   padding: 0;
@@ -45,6 +45,11 @@
 
 .downtext {
   padding-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+
+	color:#00b09b ;
+
+  
 }
 
 .maindiv {

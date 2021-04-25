@@ -1,11 +1,13 @@
- .btn{
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+  
+ /* .btn{
 	display: block;
 	width: 45%;
 	height: 50px;
 	border-radius: 5px;
 	outline: none;
 	border: none;
-	/* background-image: linear-gradient(to right, #32bd8f, #38d39f, #32be8f); */
+	/* background-image: linear-gradient(to right, #32bd8f, #38d39f, #32be8f); 
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
@@ -14,9 +16,75 @@
 	margin: 1rem 0;
 	cursor: pointer;
 	transition: .5s;
-	background: #00b09b;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #00b09b;  
+background: -webkit-linear-gradient(to right, #96c93d, #00b09b); 
+background: linear-gradient(to right, #96c93d, #00b09b); 
 
-	
-} 
+ } 
+
+
+  */
+ 
+
+
+
+ 
+ /* body {
+   font-family: "Lato", sans-serif;
+   color: #333333;
+   display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+ }
+ 
+ .container {
+   width: auto;
+   margin: auto;
+ }
+ 
+ a {
+   text-transform: uppercase;
+   text-decoration: none;
+   font-weight: 700;
+ }
+ 
+ .btn {
+   position: relative;
+   letter-spacing: 0.25em;
+   margin: 0 auto;
+   padding: 1rem 2.5rem;
+   background: transparent;
+   outline: none;
+   font-size: 28px;
+   color: #333333;
+ }
+ .btn::after, .btn::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 50%;
+   transform: skewX(30deg);
+   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   z-index: -2;
+ }
+ .btn::before {
+   background-color: #ffff00;
+   top: -1rem;
+   left: 0rem;
+ }
+ .btn::after {
+   background-color: #8a19ff;
+   top: 1rem;
+   left: 8rem;
+ }
+ .btn:hover::before, .btn:hover::after {
+   top: 0;
+   transform: skewx(0deg);
+ }
+ .btn:hover::after {
+   left: 0rem;
+ }
+ .btn:hover::before {
+   left: 8.75rem;
+ } */

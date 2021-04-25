@@ -8,16 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  /* color: rgb(22, 21, 21); */
-  font-weight: 700;
-  cursor: pointer;
-  border-radius: 5px;
-  /* background-color: blueviolet; */
-}
+
 
 nav {
   padding: 10px 30px;
@@ -30,3 +21,27 @@ input {
   padding: 5px 10px;
   margin: 6px;
 }
+
+
+.btn{
+	display: block;
+	border-radius: 5px;
+	outline: none;
+	border: none; 
+	
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+	background: #00b09b;  
+background: -webkit-linear-gradient(to right, #96c93d, #00b09b); 
+background: linear-gradient(to right, #96c93d, #00b09b); 
+
+ }
+
+
+

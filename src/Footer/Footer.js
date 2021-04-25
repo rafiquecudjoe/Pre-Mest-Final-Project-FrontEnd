@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaTwitter,
   FaLinkedin,
+  FaWhatsapp
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -77,6 +78,9 @@ const Footer = () => {
           </Link>
           <Link>
             <FaTwitter />
+          </Link>
+          <Link>
+            <FaWhatsapp />
           </Link>
         </div>
       </div>

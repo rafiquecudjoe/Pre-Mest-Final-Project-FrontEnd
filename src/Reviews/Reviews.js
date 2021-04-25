@@ -19,7 +19,6 @@ const Reviews = () => {
       <div className={Reviewcss.mainreview}>
         <div className={Reviewcss.reviewcard1}>
           <div className={Reviewcss.img1}>
-          {/* <img src={jane1} alt="john" height="100%" width="100%"/> */}
           </div>
           <div className={Reviewcss.text1}>
             <em>

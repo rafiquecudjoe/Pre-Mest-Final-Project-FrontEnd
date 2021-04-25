@@ -49,7 +49,12 @@ const FAQ = () => {
         </div>
       </div>
       <div className={FAQcss.footer}>
-        <Button text="GET STARTED" />
+        <Button className="btn"
+          style={{
+            width: "20%",
+            height: "50px"
+          }} 
+          text="GET STARTED" />
       </div>
     </div>
   );

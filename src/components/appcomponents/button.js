@@ -3,12 +3,13 @@ import "./Button.css"
 function Button(props) {
     return (
         <>
-            <button style={{background:props.background}}
+            <button style={props.style}
                 
-                className="btn" name={props.name} onClick={props.onClick}>{props.text}</button>
+                className={props.className} name={props.name} onClick={props.onClick}>{props.text}</button>
         </>
     )
     
 }
 
 export default Button;
+

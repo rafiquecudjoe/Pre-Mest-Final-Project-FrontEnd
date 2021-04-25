@@ -4,9 +4,12 @@ import Button from "../../components/appcomponents/button";
 import InputField from "../../components/appcomponents/InputField";
 import pic1 from "./img/login-green2.svg";
 import pic3 from "../Login/img/avatar.svg";
+import {useHistory} from "react-router-dom"
 
 function Signup() {
   const [values, setvalues] = useState({});
+
+  let history = useHistory();
 
   const updatevalues = (e) => {
     setvalues({ ...values, [e.target.name]: e.target.value });
@@ -15,6 +18,8 @@ function Signup() {
   function signup(e) {
     e.preventDefault();
     console.log(values);
+    history.push("/login")
+
 
     fetch("http://localhost:5000/api/v1/signup", {
       method: "POST",
@@ -107,7 +112,7 @@ function Signup() {
             <a href="#">Forgot Password?</a>
             <a href="/login">Already have an Account? Login</a>
 
-            <Button className="" onClick={signup} text="Signup" />
+            <Button className="btn" onClick={signup} text="Signup" />
           </form>
         </div>
       </div>
