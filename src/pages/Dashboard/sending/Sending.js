@@ -1,24 +1,27 @@
-import Dashboardcss from "./Dashboard.module.css";
-import logo3 from "../Banner/img/expresslogo2.png";
-import InputField from "../../components/appcomponents/InputField";
-import urban from "../../urban.png";
-import Button from "../../components/appcomponents/button";
-import Sending from "./img/package.png";
-import Receiving from "./img/package.svg";
-import dashboard from "./img/dashboard.svg";
-import Billing from "./img/credit-card.svg";
-import Settings from "./img/settings.svg";
-import Help from "./img/help.svg";
-import Tracking from "./img/tracking.png";
+import Sendingcss from "./Sending.module.css"
+import logo3 from "../../Banner/img/expresslogo2.png";
+import InputField from "../../../components/appcomponents/InputField";
+import urban from "../../../urban.png";
+import Button from "../../../components/appcomponents/button";
+import sending from "../img/package.png";
+import Receiving from "../img/package.svg";
+import dashboard from "../img/dashboard.svg";
+import Billing from "../img/credit-card.svg";
+import Settings from "../img/settings.svg";
+import Help from "../img/help.svg";
+import Tracking from "../img/tracking.png";
 
-function Dashboard() {
+
+
+
+const Sending = () => {
   return (
-    <div className={Dashboardcss.main}>
-      <div className={Dashboardcss.uppertext}>
-        <div className={Dashboardcss.img}>
+    <div className={Sendingcss.main}>
+      <div className={Sendingcss.uppertext}>
+        <div className={Sendingcss.img}>
           <img src={logo3} alt="logo" height="100%" width="100%" />
         </div>
-        <div className={Dashboardcss.search}>
+        <div className={Sendingcss.search}>
           <InputField
             style={{
               height: "40px",
@@ -28,7 +31,7 @@ function Dashboard() {
             placeholder="Seach orders,contacts or history"
           />
         </div>
-        <div className={Dashboardcss.account}>
+        <div className={Sendingcss.account}>
           <select
             style={{
               height: "40px",
@@ -44,18 +47,18 @@ function Dashboard() {
           </select>
         </div>
       </div>
-      <div className={Dashboardcss.maintext}>
-        <div className={Dashboardcss.leftmenu}>
+      <div className={Sendingcss.maintext}>
+        <div className={Sendingcss.leftmenu}>
           <ul>
             <li>
-              <a href="/dashboard">
+              <a href="#">
                 <img src={dashboard} height="30px" width="30px" />
                 Dashboard
               </a>
             </li>
             <li>
-              <a href="/dashboard/sending">
-                <img src={Sending} height="30px" width="30px" />
+              <a href="#">
+                <img src={sending} height="30px" width="30px" />
                 Sending
               </a>
             </li>
@@ -93,32 +96,32 @@ function Dashboard() {
             </li>
           </ul>
         </div>
-        <div className={Dashboardcss.inputcontainer}>
-          <div className={Dashboardcss.inputtext1}>
+        <div className={Sendingcss.inputcontainer}>
+          <div className={Sendingcss.inputtext1}>
             <textarea
               style={{ height: "50px", width: "300px", resize: "none" }}
             >
               Hello Welcome to Express Delivery
             </textarea>
           </div>
-          <div className={Dashboardcss.inputtext2}>
-            <div className={Dashboardcss.text2}>
-              <div className={Dashboardcss.text5}>
-                <p className={Dashboardcss.welcom}>
+          <div className={Sendingcss.inputtext2}>
+            <div className={Sendingcss.text2}>
+              <div className={Sendingcss.text5}>
+                <p className={Sendingcss.welcom}>
                   <h2>Welcome to Express Delivery!</h2>
                 </p>
-                <p className={Dashboardcss.this}>
-                  This is your dashboard where you can book parcels, print
+                <p className={Sendingcss.this}>
+                  This is your Sending where you can book parcels, print
                   delivery <br />
                   labels and track everything you send.
                 </p>
-                <p className={Dashboardcss.we}>
+                <p className={Sendingcss.we}>
                   We also have loads of great information in our Help Centre to
                   get <br />
                   you started
                 </p>
               </div>
-              <div className={Dashboardcss.buttons}>
+              <div className={Sendingcss.buttons}>
                 <Button
                   style={{
                     width: "30%",
@@ -139,7 +142,7 @@ function Dashboard() {
                 />
               </div>
             </div>
-            <div className={Dashboardcss.img2}>
+            <div className={Sendingcss.img2}>
               <img src={urban} height="100%" width="100%" />
             </div>
           </div>
@@ -147,6 +150,7 @@ function Dashboard() {
       </div>
     </div>
   );
-}
+};
 
-export default Dashboard;
+
+export default Sending;

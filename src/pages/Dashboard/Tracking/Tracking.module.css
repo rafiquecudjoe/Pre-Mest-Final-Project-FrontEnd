@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"); 
+.main{
+    display: flex;
+    height: 100vh;
+   background-image: url(./track.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   justify-content: center;
+   align-items: center;
+   /* font-family: "Open Sans", sans-serif, Arial, Helvetica, sans-serif; */
+   
+}
+
+
+
+.content{
+    display: flex;
+    /* background-color: aqua; */
+    flex: 0.3;
+    flex-direction: column;
+
+    
+}
+
+.content{
+    text-align: center;
+}
+
+
+.content p{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.content em{
+    text-align: left;
+}
+
+.btn{
+	display: block;
+	border-radius: 5px;
+	outline: none;
+	border: none; 
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+    margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+	background: #00b09b;  
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b); 
+    background: linear-gradient(to right, #96c93d, #00b09b); 
+
+ }
+
+
+
