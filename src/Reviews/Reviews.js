@@ -1,9 +1,5 @@
 import Reviewcss from "./Review.module.css";
-import jane1 from "./img/jane1.jpg"
-import bismark from "./img/bismark1.jpg"
 
-import ema1 from "./img/ema1.jpg"
-import esther from "./img/estther1.jpg"
 
 
 const Reviews = () => {

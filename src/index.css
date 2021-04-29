@@ -1,5 +1,5 @@
 body {
-  overflow: scroll;
+  /* overflow: scroll; */
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -33,7 +33,7 @@ input {
 	font-size: 1.2rem;
 	color: #fff;
 	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
+	
 	margin: 1rem 0;
 	cursor: pointer;
 	transition: .5s;

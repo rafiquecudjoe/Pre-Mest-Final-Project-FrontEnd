@@ -22,10 +22,10 @@ const Banner = () => {
         </div>
         <div className={Bannercss.menulinks}>
           <a href="/">HOME</a>
-          <a href="#">PRICING</a>
-          <a href="#">TRACKING</a>
-          <a href="#">ABOUT</a>
-          <a href="#">CONTACT US</a>
+          <a href="/">PRICING</a>
+          <a href="/">TRACKING</a>
+          <a href="/">ABOUT</a>
+          <a href="/">CONTACT US</a>
         </div>
         <div className={Bannercss.navbuttons}>
           <Button style={{

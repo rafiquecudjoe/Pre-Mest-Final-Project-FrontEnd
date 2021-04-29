@@ -1,7 +1,7 @@
 import Dashboardcss from "./Dashboard.module.css";
 import logo3 from "../Banner/img/expresslogo2.png";
 import InputField from "../../components/appcomponents/InputField";
-import urban from "../../urban.png";
+import urban from "../../urban1.png";
 import Button from "../../components/appcomponents/button";
 import Sending from "./img/package.png";
 import Receiving from "./img/package.svg";
@@ -25,7 +25,7 @@ function Dashboard() {
               width: "430px",
               border: "none",
             }}
-            placeholder="Seach orders,contacts or history"
+            placeholder="Search orders,contacts or history"
           />
         </div>
         <div className={Dashboardcss.account}>
@@ -37,7 +37,7 @@ function Dashboard() {
               outline: "none",
             }}
           >
-            <option selected hidden>
+            <option defaultValue hidden>
               Rafique Adam
             </option>
             <option>Logout</option>
@@ -49,45 +49,45 @@ function Dashboard() {
           <ul>
             <li>
               <a href="/dashboard">
-                <img src={dashboard} height="30px" width="30px" />
+                <img src={dashboard} alt="dash" height="30px" width="30px" />
                 Dashboard
               </a>
             </li>
             <li>
               <a href="/dashboard/sending">
-                <img src={Sending} height="30px" width="30px" />
+                <img src={Sending} alt="send" height="30px" width="30px" />
                 Sending
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Receiving} height="30px" width="30px" />
+              <a href="/">
+                <img src={Receiving} alt="receive"  height="30px" width="30px" />
                 Receiving
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Tracking} height="30px" width="30px" />
+              <a href="/">
+                <img src={Tracking} alt="track"  height="30px" width="30px" />
                 Tracking
               </a>
             </li>
 
             <hr></hr>
             <li>
-              <a href="#">
-                <img src={Settings} height="30px" width="30px" />
+              <a href="/">
+                <img src={Settings} alt="settings" height="30px" width="30px" />
                 Settings
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Billing} height="30px" width="30px" />
+              <a href="/">
+                <img src={Billing} alt="billing" height="30px" width="30px" />
                 Billing
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Help} height="30px" width="30px" />
+              <a href="/">
+                <img src={Help} alt="help" height="30px" width="30px" />
                 Help
               </a>
             </li>
@@ -97,16 +97,17 @@ function Dashboard() {
           <div className={Dashboardcss.inputtext1}>
             <textarea
               style={{ height: "50px", width: "300px", resize: "none" }}
+              defaultValue="Hello Welcome to Express Delivery"
             >
-              Hello Welcome to Express Delivery
+              
             </textarea>
           </div>
           <div className={Dashboardcss.inputtext2}>
             <div className={Dashboardcss.text2}>
               <div className={Dashboardcss.text5}>
-                <p className={Dashboardcss.welcom}>
+                <div className={Dashboardcss.welcom}>
                   <h2>Welcome to Express Delivery!</h2>
-                </p>
+                </div>
                 <p className={Dashboardcss.this}>
                   This is your dashboard where you can book parcels, print
                   delivery <br />
@@ -120,10 +121,10 @@ function Dashboard() {
               </div>
               <div className={Dashboardcss.buttons}>
                 <Button
+                  className={Dashboardcss.btn}
                   style={{
                     width: "30%",
                     height: "50px",
-                    backgroundColor: "#93C3FF",
                     border: "none",
                   }}
                   text="Send Parcel"
@@ -132,7 +133,7 @@ function Dashboard() {
                   style={{
                     width: "30%",
                     height: "50px",
-                    backgroundColor: "#93C3FF",
+                    
                     border: "none",
                   }}
                   text="Get quote"
@@ -140,7 +141,7 @@ function Dashboard() {
               </div>
             </div>
             <div className={Dashboardcss.img2}>
-              <img src={urban} height="100%" width="100%" />
+              <img src={urban} alt="urban" height="100%" width="100%" />
             </div>
           </div>
         </div>

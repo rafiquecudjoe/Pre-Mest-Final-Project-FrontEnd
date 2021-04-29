@@ -14,6 +14,7 @@ import FAQ from "./F.A.Q/FAQ";
 import "./App.css";
 import Receiving from "./pages/Dashboard/Receiving/Receiving";
 import Tracking from "./pages/Dashboard/Tracking/Tracking";
+import SunspotLoaderComponent from "./SunspotLoaderComponent"
 
 const AppRouter = () => {
   return (
@@ -32,6 +33,7 @@ const AppRouter = () => {
       <Route exact path="/dashboard/sending" component={Sending} />
       <Route exact path="/receiving" component={Receiving} />
       <Route exact path="/tracking" component={Tracking} />
+      <Route exact path="/loader" component={SunspotLoaderComponent}/>
     </Switch>
   );
 };

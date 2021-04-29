@@ -39,12 +39,12 @@ function Signup() {
 
   return (
     <>
-      <img className={Mycss1.wave} src={pic1} />
+      <img className={Mycss1.wave} src={pic1} alt="wave"  />
       <div className={Mycss1.container}>
         <div className={Mycss1.img} />
         <div className={Mycss1.login_content}>
           <form className={Mycss1.form_control}>
-            <img src={pic3} />
+            <img src={pic3} alt="pic" />
             <h2 className={Mycss1.title}>Welcome</h2>
 
             {/* Fullname section */}
@@ -109,10 +109,15 @@ function Signup() {
               </div>
             </div>
 
-            <a href="#">Forgot Password?</a>
+            <a href="/">Forgot Password?</a>
             <a href="/login">Already have an Account? Login</a>
 
-            <Button className="btn" onClick={signup} text="Signup" />
+            <Button style={{
+                width: "50%",
+              height: "50px",
+                
+              }}
+              className={Mycss1.btn2} className="btn" onClick={signup} text="Signup" />
           </form>
         </div>
       </div>

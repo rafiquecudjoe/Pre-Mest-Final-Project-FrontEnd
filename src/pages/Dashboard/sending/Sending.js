@@ -51,46 +51,46 @@ const Sending = () => {
         <div className={Sendingcss.leftmenu}>
           <ul>
             <li>
-              <a href="#">
-                <img src={dashboard} height="30px" width="30px" />
+              <a href="/">
+                <img src={dashboard} alt="dash"  height="30px" width="30px" />
                 Dashboard
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={sending} height="30px" width="30px" />
+              <a href="/">
+                <img src={sending} alt="send"  height="30px" width="30px" />
                 Sending
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Receiving} height="30px" width="30px" />
+              <a href="/">
+                <img src={Receiving} alt="receive" height="30px" width="30px" />
                 Receiving
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Tracking} height="30px" width="30px" />
+              <a href="/">
+                <img src={Tracking} alt="track" height="30px" width="30px" />
                 Tracking
               </a>
             </li>
 
             <hr></hr>
             <li>
-              <a href="#">
-                <img src={Settings} height="30px" width="30px" />
+              <a href="/">
+                <img src={Settings} alt="settings"  height="30px" width="30px" />
                 Settings
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Billing} height="30px" width="30px" />
+              <a href="/">
+                <img src={Billing} alt="billing" height="30px" width="30px" />
                 Billing
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Help} height="30px" width="30px" />
+              <a href="/">
+                <img src={Help} alt="help" height="30px" width="30px" />
                 Help
               </a>
             </li>
@@ -143,7 +143,7 @@ const Sending = () => {
               </div>
             </div>
             <div className={Sendingcss.img2}>
-              <img src={urban} height="100%" width="100%" />
+              <img src={urban} alt="urban" height="100%" width="100%" />
             </div>
           </div>
         </div>

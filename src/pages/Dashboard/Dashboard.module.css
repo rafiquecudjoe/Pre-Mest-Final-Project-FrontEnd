@@ -141,3 +141,14 @@
 .text5 h2 {
   margin-right: 80px;
 }
+
+
+.btn{
+  background: #00b09b;  
+  background: -webkit-linear-gradient(to right, #96c93d, #00b09b); 
+  background: linear-gradient(to right, #96c93d, #00b09b); 
+  
+   }
+ 
+
+

@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import pic3 from "./img/avatar.svg";
 import pic4 from "./img/authen.svg";
 import Mycss from "./login.module.css";
 import Button from "../../components/appcomponents/button";
 import InputField from "../../components/appcomponents/InputField";
+import { url } from "../../Endpoint"
+import SunspotLoaderComponent from "../../SunspotLoaderComponent"
 
 function Login() {
+  
   
   const [values, setValues] = useState({});
 
@@ -16,32 +19,46 @@ function Login() {
     setValues({ ...values, [e.target.name]: e.target.value });
   }
 
-  function submit(e) {
-    e.preventDefault();
+ 
+    function submit(e) {
+      e.preventDefault();
+  
+      console.log(values)
+  
+      let json_object = JSON.stringify(values);
+  
+  
+  
+      fetch(`${url}/login`, {
+        method: "POST",
+        body: json_object,
+        headers: { "Content-Type": "application/json" },
+      })
+        
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.success) {
+            history.push("/dashboard");
+          } else {
+            // display
+          }
+        },err => console.log(err));
+    }
+  
+      
+  
 
-    console.log(values)
-
-    let json_object = JSON.stringify(values);
-
-    history.push("/dashboard");
-
-    fetch("http://localhost:5000/api/v1/login", {
-      method: "POST",
-      body: json_object,
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((res) => {});
-  }
-
+  
   return (
     <>
+      
       <div className={Mycss.container}>
-        <img className={Mycss.wave} src={pic4}></img>
+        
+        <img className={Mycss.wave} src={pic4} alt="wave" ></img>
         <div className={Mycss.img}></div>
         <div className={Mycss.login_content}>
           <form className={Mycss.form_control}>
-            <img src={pic3} />
+            <img src={pic3} alt="dash" />
             <h2 className={Mycss.title}>Welcome</h2>
 
             {/* Username section */}
@@ -70,19 +87,23 @@ function Login() {
               </div>
             </div>
 
-            <a href="#">Forgot Password?</a>
+            <a href="/">Forgot Password?</a>
             <a href="/signup">Dont Have an Account, Sign Up?</a>
-
+            <div className={Mycss.lbtn}>
+              
             <Button
               style={{
                 width: "30%",
                 height: "50px",
               }}
+              className={Mycss.btn}
               className="btn"
               onClick={submit}
               // onClick={() => gotoPage("/Signup")}
               text="Login"
             />
+  </div>
+          
           </form>
         </div>
       </div>

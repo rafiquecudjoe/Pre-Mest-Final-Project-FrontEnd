@@ -220,3 +220,10 @@ a:hover {
     justify-content: center;
   }
 }
+
+
+.lbtn{
+  margin-left: 60px;
+  padding-left: 20px;
+  width: 200%;
+}

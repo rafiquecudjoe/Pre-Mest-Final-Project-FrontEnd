@@ -48,46 +48,56 @@ const Receiving = () => {
         <div className={Receivingcss.leftmenu}>
           <ul>
             <li>
-              <a href="#">
-                <img src={Rdashboard} height="30px" width="30px" />
+              <a href="/">
+                <img src={Rdashboard} alt="dash" height="30px" width="30px" />
                 Dashboard
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Rsend} height="30px" width="30px" />
+              <a href="/">
+                <img src={Rsend} alt="send" height="30px" width="30px" />
                 Sending
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Rreceive} height="30px" width="30px" />
+              <a href="/">
+                <img src={Rreceive} alt="receive" height="30px" width="30px" />
                 Receiving
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Rtracking} height="30px" width="30px" />
+              <a href="/">
+                <img
+                  src={Rtracking}
+                  alt="tracking"
+                  height="30px"
+                  width="30px"
+                />
                 Tracking
               </a>
             </li>
 
             <hr></hr>
             <li>
-              <a href="#">
-                <img src={Rsettings} height="30px" width="30px" />
+              <a href="/">
+                <img
+                  src={Rsettings}
+                  alt="settings"
+                  height="30px"
+                  width="30px"
+                />
                 Settings
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Rbilling} height="30px" width="30px" />
+              <a href="/">
+                <img src={Rbilling} alt="billing" height="30px" width="30px" />
                 Billing
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={Rhelp} height="30px" width="30px" />
+              <a href="/">
+                <img src={Rhelp} alt="help" height="30px" width="30px" />
                 Help
               </a>
             </li>
@@ -140,7 +150,7 @@ const Receiving = () => {
               </div>
             </div>
             <div className={Receivingcss.img2}>
-              <img src={urban} height="100%" width="100%" />
+              <img src={urban} alt="urban" height="100%" width="100%" />
             </div>
           </div>
         </div>
