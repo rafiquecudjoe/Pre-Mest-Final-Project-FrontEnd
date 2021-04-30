@@ -3,6 +3,7 @@ import Reviews from "./Reviews/Reviews";
 import Footer from "./Footer/Footer";
 import Features from "./Features/Features";
 import FAQ from './F.A.Q/FAQ'
+import SendNow from "./pages/SendNow/SendNow"
 
 const LandingPage = () => {
   return (
@@ -11,7 +12,8 @@ const LandingPage = () => {
         <Banner />
         <Features/>
         <Reviews />
-        <FAQ/>
+        <FAQ />
+        <SendNow/>
         <Footer/>
       </main>
     </div>

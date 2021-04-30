@@ -23,6 +23,7 @@
   flex: 0.81;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 50px;
 }
 
 .reviewcard1 {
@@ -67,10 +68,11 @@
    font-style: light;
   font-family: "Open Sans", sans-serif,Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  color:#7a8691 ;
+  color:#000000 ;
   font-size: 1rem;
   line-height: 1.25;
   -webkit-text-size-adjust: 100%;
+ 
 }
 
 .img2 {

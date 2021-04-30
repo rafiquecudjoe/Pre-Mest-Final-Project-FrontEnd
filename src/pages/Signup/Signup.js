@@ -7,6 +7,7 @@ import pic3 from "../Login/img/avatar.svg";
 import {useHistory} from "react-router-dom"
 
 function Signup() {
+
   const [values, setvalues] = useState({});
 
   let history = useHistory();

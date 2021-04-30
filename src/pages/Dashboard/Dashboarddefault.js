@@ -10,10 +10,7 @@ import Billing from "./img/credit-card.svg";
 import Settings from "./img/settings.svg";
 import Help from "./img/help.svg";
 import Tracking from "./img/tracking.png";
-import Test from "../../Test";
-
-import DashboardRoutes from "../../DashboardRoutes";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 function Dashboard() {
   return (
@@ -29,7 +26,7 @@ function Dashboard() {
               width: "430px",
               border: "none",
             }}
-            placeholder="Search orders,contacts or history"
+            placeholder="Seach orders,contacts or history"
           />
         </div>
         <div className={Dashboardcss.account}>
@@ -41,12 +38,10 @@ function Dashboard() {
               outline: "none",
             }}
           >
-            <option defaultValue hidden>
+            <option selected hidden>
               Rafique Adam
             </option>
-            <option>
-              <a href="http://localhost:3000/">Logout</a>
-            </option>
+            <option>Logout</option>
           </select>
         </div>
       </div>
@@ -54,13 +49,13 @@ function Dashboard() {
         <div className={Dashboardcss.leftmenu}>
           <ul>
             <li>
-              <Link to="/dashboarddefault">
-              <img src={dashboard} alt="dash" height="30px" width="30px" />
-                Dashboard</Link>
-               
+              <a href="/dashboard">
+                <img src={dashboard} height="30px" width="30px" />
+                Dashboard
+              </a>
             </li>
             <li>
-              <Link to="/dashboard/sending">
+            <Link to="/dashboard/sending">
                 <img src={Sending} alt="send" height="30px" width="30px" />
                 Sending
               </Link>
@@ -72,28 +67,28 @@ function Dashboard() {
               </Link>
             </li>
             <li>
-            <Link to="/dashboard/tracking">
-                <img src={Tracking} alt="send" height="30px" width="30px" />
+              <a href="#">
+                <img src={Tracking} height="30px" width="30px" />
                 Tracking
-              </Link>
+              </a>
             </li>
 
             <hr></hr>
             <li>
-              <a href="/">
-                <img src={Settings} alt="settings" height="30px" width="30px" />
+              <a href="#">
+                <img src={Settings} height="30px" width="30px" />
                 Settings
               </a>
             </li>
             <li>
-              <a href="/">
-                <img src={Billing} alt="billing" height="30px" width="30px" />
+              <a href="#">
+                <img src={Billing} height="30px" width="30px" />
                 Billing
               </a>
             </li>
             <li>
-              <a href="/">
-                <img src={Help} alt="help" height="30px" width="30px" />
+              <a href="#">
+                <img src={Help} height="30px" width="30px" />
                 Help
               </a>
             </li>
@@ -103,11 +98,52 @@ function Dashboard() {
           <div className={Dashboardcss.inputtext1}>
             <textarea
               style={{ height: "50px", width: "300px", resize: "none" }}
-              defaultValue="Hello Welcome to Express Delivery"
-            ></textarea>
+            >
+              Hello Welcome to Express Delivery
+            </textarea>
           </div>
-
-          <DashboardRoutes />
+          <div className={Dashboardcss.inputtext2}>
+            <div className={Dashboardcss.text2}>
+              <div className={Dashboardcss.text5}>
+                <p className={Dashboardcss.welcom}>
+                  <h2>Welcome to Express Delivery!</h2>
+                </p>
+                <p className={Dashboardcss.this}>
+                  This is your dashboard where you can book parcels, print
+                  delivery <br />
+                  labels and track everything you send.
+                </p>
+                <p className={Dashboardcss.we}>
+                  We also have loads of great information in our Help Centre to
+                  get <br />
+                  you started
+                </p>
+              </div>
+              <div className={Dashboardcss.buttons}>
+                <Button
+                  style={{
+                    width: "30%",
+                    height: "50px",
+                    backgroundColor: "#93C3FF",
+                    border: "none",
+                  }}
+                  text="Send Parcel"
+                />
+                <Button
+                  style={{
+                    width: "30%",
+                    height: "50px",
+                    backgroundColor: "#93C3FF",
+                    border: "none",
+                  }}
+                  text="Get quote"
+                />
+              </div>
+            </div>
+            <div className={Dashboardcss.img2}>
+              <img src={urban} height="100%" width="100%" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

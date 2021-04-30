@@ -17,7 +17,11 @@ nav {
 }
 
 input {
-  border-style: dashed;
+  height: 50px;
+  width: 80%;
+  border-radius: 5px;
+  
+  
   padding: 5px 10px;
   margin: 6px;
 }

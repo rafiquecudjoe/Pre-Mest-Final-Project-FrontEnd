@@ -15,6 +15,10 @@ import "./App.css";
 import Receiving from "./pages/Dashboard/Receiving/Receiving";
 import Tracking from "./pages/Dashboard/Tracking/Tracking";
 import SunspotLoaderComponent from "./SunspotLoaderComponent"
+import SendNow from "./pages/SendNow/SendNow"
+import Express404 from "./pages/404/Express404"
+import DashboardDefault from "./pages/Dashboard/Dashboarddefault"
+import Neworder from "./pages/Neworder/Neworder"
 
 const AppRouter = () => {
   return (
@@ -25,15 +29,19 @@ const AppRouter = () => {
       <Route exact path="/banner" component={Banner} />
       <Route exact path="/nav" component={Navbar} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/dashboard" component={Dashboard} />
+      {/* <Route exact path="/dashboard" component={Dashboard} /> */}
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/reviews" component={Reviews} />
       <Route exact path="/footer" component={Footer} />
       <Route exact path="/arrays" component={Arrays} />
-      <Route exact path="/dashboard/sending" component={Sending} />
-      <Route exact path="/receiving" component={Receiving} />
-      <Route exact path="/tracking" component={Tracking} />
-      <Route exact path="/loader" component={SunspotLoaderComponent}/>
+      <Route exact path="/dashboard/sending" component={Dashboard} />
+      <Route exact path="/dashboard/receiving" component={Dashboard} />
+      <Route exact path="/dashboard/tracking" component={Dashboard} />
+      <Route exact path="/loader" component={SunspotLoaderComponent} />
+      <Route exact path="/sendnow" component={SendNow} />
+      <Route exact path="/404" component={Express404} />
+      <Route exact path="/dashboarddefault" component={DashboardDefault} />
+      <Route exact path="/neworder" component={Neworder}/>
     </Switch>
   );
 };
