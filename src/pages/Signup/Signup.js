@@ -113,7 +113,7 @@ function Signup() {
             <a href="/">Forgot Password?</a>
             <a href="/login">Already have an Account? Login</a>
 
-            <Button style={{
+            <Button style={{marginLeft:"100px",
                 width: "50%",
               height: "50px",
                 

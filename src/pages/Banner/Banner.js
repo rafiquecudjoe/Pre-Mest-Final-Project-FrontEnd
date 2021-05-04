@@ -2,6 +2,7 @@ import Bannercss from "../Banner/Banner.module.css";
 import Button from "../../components/appcomponents/button";
 import { useHistory } from "react-router-dom";
 import expresslogo from "./img/expresslogo2.png"
+import {Link} from "react-router-dom"
 
 const Banner = () => {
   const history = useHistory();
@@ -21,11 +22,11 @@ const Banner = () => {
           <img src={expresslogo} alt="logo" height="100%" width="100%"/>
         </div>
         <div className={Bannercss.menulinks}>
-          <a href="/">HOME</a>
-          <a href="/">PRICING</a>
-          <a href="/">TRACKING</a>
-          <a href="/">ABOUT</a>
-          <a href="/">CONTACT US</a>
+          <Link to="/">HOME</Link>
+          <Link to="/">PRICING</Link>
+          <Link to="/">TRACKING</Link>
+          <Link to="/">ABOUT</Link>
+          <Link to="/"> CONTACT US</Link>
         </div>
         <div className={Bannercss.navbuttons}>
           <Button style={{
