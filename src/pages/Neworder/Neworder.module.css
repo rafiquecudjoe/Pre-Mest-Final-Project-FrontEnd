@@ -39,3 +39,9 @@
     }
 
    
+
+    .userdetails{
+        display: flex;
+        flex-wrap: wrap;
+    }
+

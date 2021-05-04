@@ -11,7 +11,9 @@ const Neworder = () => {
       <div className={Newordercss.lowerdiv}>
         <div className={Newordercss.formcontainer}>
           <form className={Newordercss.form}>
-            <p>Where Are you Sending from?</p>
+            <div className={Newordercss.userdetails}>
+              <div className={Newordercss.input}>
+                <p>Where Are you Sending from?</p>
             <select>
               <option defaultValue hidden>
                 Cities
@@ -22,12 +24,19 @@ const Neworder = () => {
               <option>Asafo</option>
               <option>Adum</option>
             </select>
-            <p>What is the Size of your Package</p>
+
+
+              </div>
+              <p>What is the Size of your Package</p>
             <label>Weight</label>
                       <InputField style={{height:"20%", width:"20%"}}/> Kg
-            <p>Description</p>
+              <div>
+              <p>Description</p>
             <textarea></textarea>
-            <p>Where are you Sending to?</p>
+
+              </div>
+              <div>
+              <p>Where are you Sending to?</p>
             <select>
               <option defaultValue hidden>
                 Cities
@@ -38,19 +47,43 @@ const Neworder = () => {
               <option>Asafo</option>
               <option>Adum</option>
             </select>
-            <p>Who are you Sending to </p>
+
+              </div>
+              <p>Who are you Sending to </p>
             Contact name
             <InputField />
+              <div>
               <p>Email  </p>      
             <InputField />
+
+              </div>
+            
+              <div>
               <p>Phone Number</p>
             <InputField  />
-            <p>Address</p>
+            </div>
+              <div>
+              <p>Address</p>
             <textarea></textarea>
-            <p>How can we collect your parcel</p>
+              </div>
+              <div>
+              <p>How can we collect your parcel</p>
             <textarea>Pick Up my parcel </textarea>
             <textarea>I will drop it off</textarea>
-            <Button />
+
+              </div>
+              <div>
+              <Button />
+
+              </div>
+            
+            
+             
+              
+           
+           
+           
+</div>
           </form>
         </div>
               <div className={Newordercss.imagecontainer}>
