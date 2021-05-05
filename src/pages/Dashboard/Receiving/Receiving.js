@@ -1,6 +1,6 @@
-import Dashboardcss from "../Dashboard.module.css"
-import Button from "../../../components/appcomponents/button"
-import urban from "../../../urban1.png"
+import Dashboardcss from "../Dashboard.module.css";
+import Button from "../../../components/appcomponents/button";
+import urban from "../../../urban1.png";
 
 const Receiving = () => {
   return (
@@ -9,19 +9,18 @@ const Receiving = () => {
         <div className={Dashboardcss.text2}>
           <div className={Dashboardcss.text5}>
             <div className={Dashboardcss.welcom}>
-              <h2>Welcome to Express Delivery!</h2>
+              <h2>Receiving a parcel?</h2>
             </div>
-            
-                <p className={Dashboardcss.this}>
-                  This is your dashboard where you can book parcels, print
-                  delivery <br />
-                  labels and track everything you send.
-                </p>
-                <p className={Dashboardcss.we}>
-                  We also have loads of great information in our Help Centre to
-                  get <br />
-                  you started
-                </p>
+
+            <p className={Dashboardcss.this}>
+              When someone sends a parcel and uses your email address it'll show
+              up here. <br />
+            </p>
+            <p className={Dashboardcss.we}>
+              Not seeing your order? <br />
+              Check that you have verified your email 
+              address. Your email address may not have been used on the order
+            </p>
           </div>
           <div className={Dashboardcss.buttons}>
             <Button
@@ -31,7 +30,7 @@ const Receiving = () => {
                 height: "50px",
                 border: "none",
               }}
-              text="Send Parcel"
+              text="Receive Parcel"
             />
             <Button
               style={{

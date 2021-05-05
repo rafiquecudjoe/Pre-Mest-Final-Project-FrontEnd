@@ -118,7 +118,9 @@ function Signup() {
               height: "50px",
                 
               }}
-              className={Mycss1.btn2} className="btn" onClick={signup} text="Signup" />
+              className={Mycss1.btn2}
+              // className="btn"
+              onClick={signup} text="Signup" />
           </form>
         </div>
       </div>

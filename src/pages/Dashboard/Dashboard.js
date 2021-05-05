@@ -1,8 +1,6 @@
 import Dashboardcss from "./Dashboard.module.css";
 import logo3 from "../Banner/img/expresslogo2.png";
 import InputField from "../../components/appcomponents/InputField";
-import urban from "../../urban1.png";
-import Button from "../../components/appcomponents/button";
 import Sending from "./img/package.png";
 import Receiving from "./img/package.svg";
 import dashboard from "./img/dashboard.svg";
@@ -10,8 +8,6 @@ import Billing from "./img/credit-card.svg";
 import Settings from "./img/settings.svg";
 import Help from "./img/help.svg";
 import Tracking from "./img/tracking.png";
-import Test from "../../Test";
-
 import DashboardRoutes from "../../DashboardRoutes";
 import { Link } from "react-router-dom";
 
@@ -45,7 +41,8 @@ function Dashboard() {
               Rafique Adam
             </option>
             <option>
-              <a href="http://localhost:3000/">Logout</a>
+              {/* <a href="http://localhost:3000/">Logout</a> */}
+              Logout
             </option>
           </select>
         </div>
@@ -55,9 +52,9 @@ function Dashboard() {
           <ul>
             <li>
               <Link to="/dashboarddefault">
-              <img src={dashboard} alt="dash" height="30px" width="30px" />
-                Dashboard</Link>
-               
+                <img src={dashboard} alt="dash" height="30px" width="30px" />
+                Dashboard
+              </Link>
             </li>
             <li>
               <Link to="/dashboard/sending">
@@ -66,13 +63,13 @@ function Dashboard() {
               </Link>
             </li>
             <li>
-            <Link to="/dashboard/receiving">
+              <Link to="/dashboard/receiving">
                 <img src={Receiving} alt="send" height="30px" width="30px" />
-                Sending
+                Receiving
               </Link>
             </li>
             <li>
-            <Link to="/dashboard/tracking">
+              <Link to="/dashboard/tracking">
                 <img src={Tracking} alt="send" height="30px" width="30px" />
                 Tracking
               </Link>
@@ -80,22 +77,22 @@ function Dashboard() {
 
             <hr></hr>
             <li>
-              <a href="/">
+              <Link to="/dashboarddefault">
                 <img src={Settings} alt="settings" height="30px" width="30px" />
                 Settings
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/dashboarddefault">
                 <img src={Billing} alt="billing" height="30px" width="30px" />
                 Billing
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/dashboarddefault">
                 <img src={Help} alt="help" height="30px" width="30px" />
                 Help
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

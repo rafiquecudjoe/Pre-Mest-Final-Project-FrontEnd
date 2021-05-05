@@ -10,7 +10,7 @@ import Billing from "./img/credit-card.svg";
 import Settings from "./img/settings.svg";
 import Help from "./img/help.svg";
 import Tracking from "./img/tracking.png";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -38,7 +38,7 @@ function Dashboard() {
               outline: "none",
             }}
           >
-            <option selected hidden>
+            <option defaultValue hidden>
               Rafique Adam
             </option>
             <option>Logout</option>
@@ -49,57 +49,63 @@ function Dashboard() {
         <div className={Dashboardcss.leftmenu}>
           <ul>
             <li>
-              <a href="/dashboard">
-                <img src={dashboard} height="30px" width="30px" />
+              <a href="/dashboarddefault">
+                <img
+                  src={dashboard}
+                  alt="dashimg4"
+                  height="30px"
+                  width="30px"
+                />
                 Dashboard
               </a>
             </li>
             <li>
-            <Link to="/dashboard/sending">
+              <Link to="/dashboard/sending">
                 <img src={Sending} alt="send" height="30px" width="30px" />
                 Sending
               </Link>
             </li>
             <li>
-            <Link to="/dashboard/receiving">
+              <Link to="/dashboard/receiving">
                 <img src={Receiving} alt="send" height="30px" width="30px" />
-                Sending
+                Receiving
               </Link>
             </li>
+
             <li>
-              <a href="#">
-                <img src={Tracking} height="30px" width="30px" />
+              <Link to="#">
+                <img src={Tracking} alt="trackingimg1"height="30px" width="30px" />
                 Tracking
-              </a>
+              </Link>
             </li>
 
             <hr></hr>
             <li>
-              <a href="#">
-                <img src={Settings} height="30px" width="30px" />
+              <Link to="#">
+                <img src={Settings} alt="settingsimg2"height="30px" width="30px" />
                 Settings
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">
-                <img src={Billing} height="30px" width="30px" />
+              <Link to="#">
+                <img src={Billing} alt="billingimg2"height="30px" width="30px" />
                 Billing
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">
-                <img src={Help} height="30px" width="30px" />
+              <Link to="#">
+                <img src={Help} alt="Helpimg2" height="30px" width="30px" />
                 Help
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className={Dashboardcss.inputcontainer}>
           <div className={Dashboardcss.inputtext1}>
-            <textarea
+            <textarea defaultValue="Hello Welcome to Express Delivery"
               style={{ height: "50px", width: "300px", resize: "none" }}
             >
-              Hello Welcome to Express Delivery
+              
             </textarea>
           </div>
           <div className={Dashboardcss.inputtext2}>
@@ -141,7 +147,7 @@ function Dashboard() {
               </div>
             </div>
             <div className={Dashboardcss.img2}>
-              <img src={urban} height="100%" width="100%" />
+              <img src={urban} alt="urbanimage"height="100%" width="100%" />
             </div>
           </div>
         </div>

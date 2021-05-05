@@ -42,7 +42,7 @@ const Express404 = () => {
          
         </div>
         <div className={Express404css.rightdiv}>
-          <img src={image} alt="image" height="100%" width="100%" />
+          <img src={image} alt="404image" height="100%" width="100%" />
         </div>
       </div>
     </div>

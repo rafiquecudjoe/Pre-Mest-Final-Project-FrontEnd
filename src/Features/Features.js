@@ -7,11 +7,11 @@ const Features = () => {
   return (
     <div className={Featurescss.main}>
       <div className={Featurescss.text}>
-        <p className={Featurescss.uppertext}>
+        <rem className={Featurescss.uppertext}>
           <h1>
             <b>Parcel delivery for small business, but better</b>
-          </h1>{" "}
-        </p>
+          </h1>
+        </rem>
         <p className={Featurescss.lowertext}>
           We tap into big business delivery networks and make them available to
           everyone. It's convenient,

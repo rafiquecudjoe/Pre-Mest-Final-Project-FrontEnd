@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import Signup from "./pages/Signup/Signup";
 import Banner from "./pages/Banner/Banner";
 import Arrays from "./Arrays";
-import Sending from "./pages/Dashboard/sending/Sending";
 import Footer from "./Footer/Footer";
 import Navbar from "./components/appcomponents/Navbar";
 import Reviews from "./Reviews/Reviews";
@@ -12,8 +11,6 @@ import LandingPage from "./LandingPage";
 import Features from "./Features/Features";
 import FAQ from "./F.A.Q/FAQ";
 import "./App.css";
-import Receiving from "./pages/Dashboard/Receiving/Receiving";
-import Tracking from "./pages/Dashboard/Tracking/Tracking";
 import SunspotLoaderComponent from "./SunspotLoaderComponent"
 import SendNow from "./pages/SendNow/SendNow"
 import Express404 from "./pages/404/Express404"

@@ -2,7 +2,7 @@ import SendNowcss from "./SendNow.module.css";
 import sendnow from "../../sendnow.svg";
 import InputField from "../../components/appcomponents/InputField";
 import Button from "../../components/appcomponents/button";
-import { Link } from "react-router-dom";
+
 
 const SendNow = () => {
   return (
@@ -38,7 +38,7 @@ const SendNow = () => {
         </div>
       </div>
       <div className={SendNowcss.image}>
-        <img src={sendnow} height="100%" width="100%" />
+        <img src={sendnow} alt=""height="100%" width="100%" />
       </div>
     </div>
   );

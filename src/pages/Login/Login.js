@@ -97,11 +97,12 @@ function Login() {
                 style={{
                   width: "30%",
                   height: "50px",
+                
                 }}
-                className={Mycss.btn}
-                className="btn"
+                className={Mycss.btn1}
+               
                 onClick={submit}
-                // onClick={() => gotoPage("/Signup")}
+               
                 text="Login"
               />
             </div>
