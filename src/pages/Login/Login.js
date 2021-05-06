@@ -5,7 +5,6 @@ import pic4 from "./img/authen.svg";
 import Mycss from "./login.module.css";
 import Button from "../../components/appcomponents/button";
 import InputField from "../../components/appcomponents/InputField";
-import { url } from "../../Endpoint";
 import SunspotLoaderComponent from "../../SunspotLoaderComponent";
 
 function Login() {
@@ -28,11 +27,11 @@ function Login() {
 
     // console.log(values);
 
-    let json_object = JSON.stringify(values);
-
-    fetch(`${url}/login`, {
+   ;
+console.log(values);
+    fetch("http://localhost:5000/api/v1/login", {
       method: "POST",
-      body: json_object,
+      body: JSON.stringify(values),
       headers: { "Content-Type": "application/json" },
     })
       .then((res) => res.json())
@@ -40,13 +39,13 @@ function Login() {
         (res) => {
           if (res.success) {
             setshowLoader(false);
-            history.push("/dashboard/sending");
+            history.push("/dashboarddefault");
           } else if (res.failure) {
             // display
-            alert("wrong udser or pass");
+            alert("Wrong Username or Password");
             setshowLoader(false);
           } else if (res.goaway) {
-            alert("user doesn't exist");
+            alert("User Doesn't Exist");
             setshowLoader(false);
           }
         },
@@ -68,11 +67,11 @@ function Login() {
             <div className={Mycss.input_div}>
               <div className={Mycss.divdiv}>
                 <InputField
-                  placeholder="Username"
+                  placeholder="Email"
                   type="text"
                   className={Mycss.input}
                   onChange={updateValues}
-                  name="username"
+                  name="email"
                 />
               </div>
             </div>

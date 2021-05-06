@@ -6,6 +6,8 @@ import pic1 from "./img/login-green2.svg";
 import pic3 from "../Login/img/avatar.svg";
 import {useHistory} from "react-router-dom"
 
+import 'react-inputs-validation/lib/react-inputs-validation.min.css';
+
 function Signup() {
 
   const [values, setvalues] = useState({});
@@ -18,8 +20,8 @@ function Signup() {
 
   function signup(e) {
     e.preventDefault();
-    console.log(values);
-    history.push("/login")
+   
+    
 
 
     fetch("http://localhost:5000/api/v1/signup", {
@@ -33,6 +35,9 @@ function Signup() {
       .then(
         (responseData) => {
           console.log(responseData);
+          alert('Signup Successful');
+          history.push("/login")
+
         },
         (err) => console.log(err)
       );
@@ -119,7 +124,7 @@ function Signup() {
                 
               }}
               className={Mycss1.btn2}
-              // className="btn"
+              className="btn"
               onClick={signup} text="Signup" />
           </form>
         </div>
