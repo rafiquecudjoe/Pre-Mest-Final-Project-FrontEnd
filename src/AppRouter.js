@@ -16,6 +16,8 @@ import SendNow from "./pages/SendNow/SendNow"
 import Express404 from "./pages/404/Express404"
 import DashboardDefault from "./pages/Dashboard/Dashboarddefault"
 import Neworder from "./pages/Neworder/Neworder"
+import Alert from "./components/pagecomponents/Alerts"
+import Help from "./pages/Dashboard/Help/Help"
 
 const AppRouter = () => {
   return (
@@ -38,7 +40,10 @@ const AppRouter = () => {
       <Route exact path="/sendnow" component={SendNow} />
       <Route exact path="/404" component={Express404} />
       <Route exact path="/dashboarddefault" component={DashboardDefault} />
-      <Route exact path="/neworder" component={Neworder}/>
+      <Route exact path="/dashboard/neworder" component={Dashboard} />
+      <Route exact path="/alert" component={Alert} />
+      <Route exact path="/dashboard/help" component={Dashboard}/>
+      
     </Switch>
   );
 };

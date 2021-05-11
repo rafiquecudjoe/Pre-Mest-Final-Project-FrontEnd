@@ -20,27 +20,39 @@ function Signup() {
 
   function signup(e) {
     e.preventDefault();
+
+    if (values.password===values.cpassword) {
+      fetch("http://localhost:5000/api/v1/signup", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then(
+          (responseData) => {
+            console.log(responseData);
+            alert('Signup Successful');
+            history.push("/login")
+  
+          },
+          (err) => console.log(err)
+        );
+
+
+
+      
+    } else {
+
+      alert('Password Do not match')
+      
+    }
    
     
 
 
-    fetch("http://localhost:5000/api/v1/signup", {
-      method: "POST",
-      body: JSON.stringify(values),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then(
-        (responseData) => {
-          console.log(responseData);
-          alert('Signup Successful');
-          history.push("/login")
-
-        },
-        (err) => console.log(err)
-      );
+   
   }
 
   return (

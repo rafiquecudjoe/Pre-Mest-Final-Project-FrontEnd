@@ -26,6 +26,8 @@
   /* background-color: green; */
   justify-content: flex-start;
   background: rgb(249, 248, 247);
+  list-style: none;
+  list-style: none !important;
 }
 
 .inputcontainer {
@@ -68,7 +70,7 @@
   font-family: "Open Sans", sans-serif, Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 700;
-  list-style: none;
+  list-style: none !important;
   color: black;
 }
 

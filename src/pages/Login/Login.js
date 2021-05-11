@@ -17,18 +17,11 @@ function Login() {
     setValues({ ...values, [e.target.name]: e.target.value });
   }
 
- 
-
   function submit(e) {
     e.preventDefault();
-   
 
     setshowLoader(true);
 
-    // console.log(values);
-
-   ;
-console.log(values);
     fetch("http://localhost:5000/api/v1/login", {
       method: "POST",
       body: JSON.stringify(values),
@@ -95,12 +88,9 @@ console.log(values);
                 style={{
                   width: "30%",
                   height: "50px",
-                
                 }}
                 className={Mycss.btn1}
-               
                 onClick={submit}
-               
                 text="Login"
               />
             </div>

@@ -10,9 +10,16 @@ import Billing from "./img/credit-card.svg";
 import Settings from "./img/settings.svg";
 import Help from "./img/help.svg";
 import Tracking from "./img/tracking.png";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 
 function Dashboard() {
+
+  const history = useHistory()
+
+  const gotopage = () => {
+    history.push('/dashboard/neworder')
+  }
+  
   return (
     <div className={Dashboardcss.main}>
       <div className={Dashboardcss.uppertext}>
@@ -48,7 +55,7 @@ function Dashboard() {
       <div className={Dashboardcss.maintext}>
         <div className={Dashboardcss.leftmenu}>
           <ul>
-            <li>
+            <li style={{listStyle:"none"}}>
               <a href="/dashboarddefault">
                 <img
                   src={dashboard}
@@ -59,41 +66,41 @@ function Dashboard() {
                 Dashboard
               </a>
             </li>
-            <li>
+            <li style={{listStyle:"none"}}>
               <Link to="/dashboard/sending">
                 <img src={Sending} alt="send" height="30px" width="30px" />
                 Sending
               </Link>
             </li>
-            <li>
+            <li style={{listStyle:"none"}}>
               <Link to="/dashboard/receiving">
                 <img src={Receiving} alt="send" height="30px" width="30px" />
                 Receiving
               </Link>
             </li>
 
-            <li>
-              <Link to="#">
+            <li style={{listStyle:"none"}}>
+              <Link to="/dashboard/tracking">
                 <img src={Tracking} alt="trackingimg1"height="30px" width="30px" />
                 Tracking
               </Link>
             </li>
 
             <hr></hr>
-            <li>
+            <li style={{listStyle:"none"}}>
               <Link to="#">
                 <img src={Settings} alt="settingsimg2"height="30px" width="30px" />
                 Settings
               </Link>
             </li>
-            <li>
+            <li style={{listStyle:"none"}}>
               <Link to="#">
                 <img src={Billing} alt="billingimg2"height="30px" width="30px" />
                 Billing
               </Link>
             </li>
-            <li>
-              <Link to="#">
+            <li style={{listStyle:"none"}}>
+              <Link to="/dashboard/help">
                 <img src={Help} alt="Helpimg2" height="30px" width="30px" />
                 Help
               </Link>
@@ -127,6 +134,7 @@ function Dashboard() {
               </div>
               <div className={Dashboardcss.buttons}>
                 <Button
+                  onClick={gotopage}
                   style={{
                     width: "30%",
                     height: "50px",
@@ -136,6 +144,8 @@ function Dashboard() {
                   text="Send Parcel"
                 />
                 <Button
+                  
+                 
                   style={{
                     width: "30%",
                     height: "50px",

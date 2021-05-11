@@ -1,93 +1,80 @@
 import Newordercss from "./Neworder.module.css";
-import InputField from "../../components/appcomponents/InputField";
-import Button from "../../components/appcomponents/button";
-import corodel from "./corodel.svg"
+import Alertcss from "../../components/pagecomponents/Alerts.module.css";
+import corodel from "./corodel.svg";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+
 const Neworder = () => {
   return (
     <div className={Newordercss.main}>
-          <div className={Newordercss.upperdiv}>
-              Send Parcel
-      </div>
+      <div className={Newordercss.upperdiv}>Send Parcel</div>
       <div className={Newordercss.lowerdiv}>
-        <div className={Newordercss.formcontainer}>
-          <form className={Newordercss.form}>
-            <div className={Newordercss.userdetails}>
-              <div className={Newordercss.input}>
-                <p>Where Are you Sending from?</p>
-            <select>
-              <option defaultValue hidden>
-                Cities
-              </option>
-              <option>Ahodwo</option>
-              <option>Asokwa</option>
-              <option>Tech</option>
-              <option>Asafo</option>
-              <option>Adum</option>
-            </select>
-
-
-              </div>
-              <p>What is the Size of your Package</p>
-            <label>Weight</label>
-                      <InputField style={{height:"20%", width:"20%"}}/> Kg
-              <div>
-              <p>Description</p>
-            <textarea></textarea>
-
-              </div>
-              <div>
-              <p>Where are you Sending to?</p>
-            <select>
-              <option defaultValue hidden>
-                Cities
-              </option>
-              <option>Ahodwo</option>
-              <option>Asokwa</option>
-              <option>Tech</option>
-              <option>Asafo</option>
-              <option>Adum</option>
-            </select>
-
-              </div>
-              <p>Who are you Sending to </p>
-            Contact name
-            <InputField />
-              <div>
-              <p>Email  </p>      
-            <InputField />
-
-              </div>
-            
-              <div>
-              <p>Phone Number</p>
-            <InputField  />
-            </div>
-              <div>
-              <p>Address</p>
-            <textarea></textarea>
-              </div>
-              <div>
-              <p>How can we collect your parcel</p>
-            <textarea>Pick Up my parcel </textarea>
-            <textarea>I will drop it off</textarea>
-
-              </div>
-              <div>
-              <Button />
-
-              </div>
-            
-            
-             
-              
-           
-           
-           
-</div>
-          </form>
+        <div className={Newordercss.newform}>
+          <Form>
+            Where are you Sending from ?
+            <Form.Group controlId="formGridState">
+              <Form.Label>Cities</Form.Label>
+              <Form.Control as="select" defaultValue="Choose...">
+                <option>Choose...</option>
+                <option>Ahodwo</option>
+                <option>Asokwa</option>
+                <option>Tech</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Row>
+              What is the size of your parcel
+              <Form.Group controlId="formGridEmail">
+                <Form.Label>Weight</Form.Label>
+                <Form.Control type="text" placeholder="Enter size in KG" />
+              </Form.Group>
+              <Form.Group controlId="formGridPassword">
+                <Form.Label>Description</Form.Label>
+                <Form.Control type="text" placeholder="Enter here" />
+              </Form.Group>
+            </Form.Row>
+            Where are you Sending To ?
+            <Form.Group controlId="formGridState">
+              <Form.Label>Cities</Form.Label>
+              <Form.Control as="select" defaultValue="Choose...">
+                <option>Choose...</option>
+                <option>Ahodwo</option>
+                <option>Asokwa</option>
+                <option>Tech</option>
+              </Form.Control>
+            </Form.Group>
+            Who are you sending to?
+            <Form.Group controlId="formGridName">
+              <Form.Label>Contact Name</Form.Label>
+              <Form.Control type="text" placeholder="" />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="" />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Phone</Form.Label>
+              <Form.Control type="text" placeholder="" />
+            </Form.Group>
+            <Form.Group controlId="formGridAddress1">
+              <Form.Label>Address</Form.Label>
+              <Form.Control placeholder="1234 Main St" />
+            </Form.Group>
+            <Form.Row>
+              <Form.Group controlId="formGridCity">
+                <Form.Label>City</Form.Label>
+                <Form.Control />
+              </Form.Group>
+            </Form.Row>
+            <textarea value="Pick up my Parcel"></textarea>
+            <textarea value="Will drop it off at your Office"></textarea>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </div>
-              <div className={Newordercss.imagecontainer}>
-                  <img src={corodel} alt="coro" height="100%" width="100%"/>
+     
+        <div className={Newordercss.imagecontainer}>
+          <img src={corodel} alt="coro" height="50%" width="100%" />
         </div>
       </div>
     </div>

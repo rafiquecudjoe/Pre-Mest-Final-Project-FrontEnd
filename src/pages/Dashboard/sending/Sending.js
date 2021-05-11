@@ -1,8 +1,17 @@
 import Dashboardcss from "../Dashboard.module.css"
 import urban from "../../../urban1.png";
 import Button from "../../../components/appcomponents/button";
+import {useHistory} from "react-router-dom"
 
 const Sending = () => {
+
+
+  const history = useHistory()
+
+  const gotopage = () => {
+    history.push('/dashboard/neworder')
+    
+  }
   return (
     <div className={Dashboardcss.main}>
       <div className={Dashboardcss.inputtext2}>
@@ -24,7 +33,7 @@ const Sending = () => {
                 </p>
           </div>
           <div className={Dashboardcss.buttons}>
-            <Button
+            <Button onClick={gotopage}
               className={Dashboardcss.btn}
               style={{
                 width: "30%",
