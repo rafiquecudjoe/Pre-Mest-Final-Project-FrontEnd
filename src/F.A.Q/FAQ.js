@@ -1,7 +1,13 @@
 import FAQcss from "./FAQ.module.css";
 import Button from "../components/appcomponents/button";
+import {useHistory} from "react-router-dom"
 
 const FAQ = () => {
+
+
+  const history = useHistory()
+  
+  const goto =() =>{history.push('/signup')}
   return (
     <div className={FAQcss.main}>
       <div className={FAQcss.title}>
@@ -53,7 +59,7 @@ const FAQ = () => {
           style={{
             width: "20%",
             height: "50px"
-          }} 
+          }} onClick={goto}
           text="GET STARTED" />
       </div>
     </div>
