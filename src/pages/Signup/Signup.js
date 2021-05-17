@@ -74,6 +74,7 @@ function Signup() {
                   className={Mycss1.input}
                   onChange={updatevalues}
                   name="fullname"
+           
                 />
               </div>
             </div>
@@ -87,6 +88,7 @@ function Signup() {
                   className={Mycss1.input}
                   onChange={updatevalues}
                   name="email"
+                 
                 />
               </div>
             </div>

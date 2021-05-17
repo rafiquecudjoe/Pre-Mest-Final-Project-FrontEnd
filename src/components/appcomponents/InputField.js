@@ -12,8 +12,8 @@ function InputField(props) {
                 value={props.value}
                 onChange={props.onChange}
                 name={props.name}
-               
-            />
+              
+            required/>
         </>
     )
     
