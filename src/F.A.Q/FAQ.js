@@ -25,7 +25,7 @@ const FAQ = () => {
             </p>
           </div>
           <div className={FAQcss.q2}>
-            <h3>Can Express Delivery pick up from me?</h3>
+            <h3>Can Express Delivery pick up for me?</h3>
             <p>
               Yes! To arrange a pickup, all you need to do is book online and
               print and attach the label.Express Delivery picks up from over 90% of
