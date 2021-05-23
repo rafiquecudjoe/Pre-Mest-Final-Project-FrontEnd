@@ -22,7 +22,7 @@ function Signup() {
     e.preventDefault();
 
     if (values.password===values.cpassword) {
-      fetch("http://localhost:5000/api/v1/signup", {
+      fetch("https://expressdelivery3.herokuapp.com/api/v1/signup", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {
