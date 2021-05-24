@@ -4,13 +4,16 @@ import Button from "../../components/appcomponents/button";
 import InputField from "../../components/appcomponents/InputField";
 import pic1 from "./img/login-green2.svg";
 import pic3 from "../Login/img/avatar.svg";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
+import SunspotLoaderComponent from "../../SunspotLoaderComponent"
 
 import 'react-inputs-validation/lib/react-inputs-validation.min.css';
 
 function Signup() {
 
   const [values, setvalues] = useState({});
+  const [showloader, setshowLoader] = useState(false);
+
 
   let history = useHistory();
 
@@ -20,6 +23,7 @@ function Signup() {
 
   function signup(e) {
     e.preventDefault();
+    setshowLoader(true);
 
     if (values.password===values.cpassword) {
       fetch("https://expressbackend3.herokuapp.com/api/v1/signup", {
@@ -142,6 +146,7 @@ function Signup() {
               onClick={signup} text="Signup" />
           </form>
         </div>
+        {showloader ? <SunspotLoaderComponent /> : null}
       </div>
     </>
   );

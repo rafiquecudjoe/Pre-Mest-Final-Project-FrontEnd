@@ -7,11 +7,9 @@ const Features = () => {
   return (
     <div className={Featurescss.main}>
       <div className={Featurescss.text}>
-        <rem className={Featurescss.uppertext}>
-          <h1>
-            <b>Parcel delivery for small business, but better</b>
-          </h1>
-        </rem>
+        <div className={Featurescss.uppertext}>
+            <p className={Featurescss.up}>Parcel delivery for small business, but better</p>
+        </div>
         <p className={Featurescss.lowertext}>
           We tap into big business delivery networks and make them available to
           everyone. It's convenient,

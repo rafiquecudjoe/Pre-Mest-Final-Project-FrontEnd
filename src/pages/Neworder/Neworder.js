@@ -65,14 +65,18 @@ const Neworder = () => {
                 <Form.Control />
               </Form.Group>
             </Form.Row>
-            <textarea value="Pick up my Parcel"></textarea>
-            <textarea value="Will drop it off at your Office"></textarea>
+            <Form.Label>How should we pick up your parcel</Form.Label>
+            <Form.Control as="select" defaultValue="Choose...">
+              <option>Choose...</option>
+              <option>Pick up my Parcel at my location</option>
+              <option>Will drop it off at your Office</option>
+            </Form.Control>
             <Button variant="primary" type="submit">
               Submit
             </Button>
           </Form>
         </div>
-     
+
         <div className={Newordercss.imagecontainer}>
           <img src={corodel} alt="coro" height="50%" width="100%" />
         </div>

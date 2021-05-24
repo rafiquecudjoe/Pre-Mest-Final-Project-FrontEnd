@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
 
   flex-direction: column;
   justify-content: space-evenly;
@@ -110,4 +110,25 @@
 
 .ttext {
   text-align: center;
+}
+
+
+@media screen and (max-width :360px) {
+  .features{
+    flex-direction: column;
+  }
+
+  .uppertext{
+
+  }
+  
+  .up{
+    
+    font-weight:2000;
+    text-align: center;
+  } 
+
+  /* .lowertext{
+    font-size: 12px;
+  } */
 }
