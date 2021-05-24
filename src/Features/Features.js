@@ -8,7 +8,7 @@ const Features = () => {
     <div className={Featurescss.main}>
       <div className={Featurescss.text}>
         <div className={Featurescss.uppertext}>
-            <p className={Featurescss.up}>Parcel delivery for small business, but better</p>
+            <p>Parcel delivery for small business, but better</p>
         </div>
         <p className={Featurescss.lowertext}>
           We tap into big business delivery networks and make them available to

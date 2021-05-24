@@ -5,6 +5,7 @@ import Receiving from "./pages/Dashboard/Receiving/Receiving"
 import Tracking from "./pages/Dashboard/Tracking/Tracking"
 import Neworder from "./pages/Neworder/Neworder"
 import Help from "./pages/Dashboard/Help/Help"
+import Payment from "./pages/payment/Payment"
 
 
 
@@ -22,7 +23,8 @@ const DashboardRoutes = () =>{
       {/* <Route exact path="/loader" component={SunspotLoaderComponent} /> */}
       <Route exact path="/dashboard/neworder" component={Neworder} />
                 {/* <Route exact path="/404" component={Express404}/> */}
-                <Route export path="/dashboard/help" component={Help}/>
+                <Route exact path="/dashboard/help" component={Help} />
+                <Route exact path="/dashboard/payment" component={Payment}/>
                 </Switch>
 
         </div>

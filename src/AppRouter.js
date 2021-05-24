@@ -11,13 +11,13 @@ import LandingPage from "./LandingPage";
 import Features from "./Features/Features";
 import FAQ from "./F.A.Q/FAQ";
 import "./App.css";
-import SunspotLoaderComponent from "./SunspotLoaderComponent"
-import SendNow from "./pages/SendNow/SendNow"
-import Express404 from "./pages/404/Express404"
-import DashboardDefault from "./pages/Dashboard/Dashboarddefault"
-import Neworder from "./pages/Neworder/Neworder"
-import Alert from "./components/pagecomponents/Alerts"
-import Help from "./pages/Dashboard/Help/Help"
+import SunspotLoaderComponent from "./SunspotLoaderComponent";
+import SendNow from "./pages/SendNow/SendNow";
+import Express404 from "./pages/404/Express404";
+import DashboardDefault from "./pages/Dashboard/Dashboarddefault";
+import Alert from "./components/pagecomponents/Alerts";
+import Payment from "./pages/payment/Payment"
+
 
 const AppRouter = () => {
   return (
@@ -42,7 +42,8 @@ const AppRouter = () => {
       <Route exact path="/dashboarddefault" component={DashboardDefault} />
       <Route exact path="/dashboard/neworder" component={Dashboard} />
       <Route exact path="/alert" component={Alert} />
-      <Route exact path="/dashboard/help" component={Dashboard}/>
+      <Route exact path="/dashboard/help" component={Dashboard} />
+      <Route exact path="/dashboard/payment" component={Dashboard}/>
       
     </Switch>
   );
