@@ -1,19 +1,17 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Mycss1 from "../Signup/Signup.module.css";
 import Button from "../../components/appcomponents/button";
 import InputField from "../../components/appcomponents/InputField";
 import pic1 from "./img/login-green2.svg";
 import pic3 from "../Login/img/avatar.svg";
-import { useHistory } from "react-router-dom"
-import SunspotLoaderComponent from "../../SunspotLoaderComponent"
+import { useHistory } from "react-router-dom";
+import SunspotLoaderComponent from "../../SunspotLoaderComponent";
 
-import 'react-inputs-validation/lib/react-inputs-validation.min.css';
+import "react-inputs-validation/lib/react-inputs-validation.min.css";
 
 function Signup() {
-
   const [values, setvalues] = useState({});
   const [showloader, setshowLoader] = useState(false);
-
 
   let history = useHistory();
 
@@ -25,7 +23,7 @@ function Signup() {
     e.preventDefault();
     setshowLoader(true);
 
-    if (values.password===values.cpassword) {
+    if (values.password === values.cpassword) {
       fetch("https://expressbackend3.herokuapp.com/api/v1/signup", {
         method: "POST",
         body: JSON.stringify(values),
@@ -37,34 +35,20 @@ function Signup() {
         .then(
           (responseData) => {
             console.log(responseData);
-            alert('Signup Successful');
-            history.push("/login")
-  
+            alert("Signup Successful");
+            history.push("/login");
           },
           (err) => console.log(err)
         );
-
-
-
-      
     } else {
-
-      alert('Password Do not match')
+      alert("Password Do not match");
       setshowLoader(false);
-      
-
-      
     }
-   
-    
-
-
-   
   }
 
   return (
     <>
-      <img className={Mycss1.wave} src={pic1} alt="wave"  />
+      <img className={Mycss1.wave} src={pic1} alt="wave" />
       <div className={Mycss1.container}>
         <div className={Mycss1.img} />
         <div className={Mycss1.login_content}>
@@ -81,7 +65,6 @@ function Signup() {
                   className={Mycss1.input}
                   onChange={updatevalues}
                   name="fullname"
-           
                 />
               </div>
             </div>
@@ -95,7 +78,6 @@ function Signup() {
                   className={Mycss1.input}
                   onChange={updatevalues}
                   name="email"
-                 
                 />
               </div>
             </div>
@@ -139,14 +121,13 @@ function Signup() {
             <a href="/">Forgot Password?</a>
             <a href="/login">Already have an Account? Login</a>
 
-            <Button style={{marginLeft:"100px",
-                width: "50%",
-              height: "50px",
-                
-              }}
+            <Button
+              style={{ marginLeft: "100px", width: "50%", height: "50px" }}
               className={Mycss1.btn2}
               className="btn"
-              onClick={signup} text="Signup" />
+              onClick={signup}
+              text="Signup"
+            />
           </form>
         </div>
         {showloader ? <SunspotLoaderComponent /> : null}

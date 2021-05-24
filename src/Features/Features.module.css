@@ -4,7 +4,6 @@
 
   flex-direction: column;
   justify-content: space-evenly;
-  
 }
 
 .text {
@@ -112,21 +111,15 @@
   text-align: center;
 }
 
-
-@media screen and (max-width :360px) {
-  .features{
+@media screen and (max-width: 360px) {
+  .features {
     flex-direction: column;
   }
 
-  .uppertext{
-
-  }
-  
-  .up{
-    
-    font-weight:2000;
+  .up {
+    font-weight: 2000;
     text-align: center;
-  } 
+  }
 
   /* .lowertext{
     font-size: 12px;
