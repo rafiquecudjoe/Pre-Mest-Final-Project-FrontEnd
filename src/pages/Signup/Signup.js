@@ -50,6 +50,9 @@ function Signup() {
     } else {
 
       alert('Password Do not match')
+      setshowLoader(false);
+      
+
       
     }
    
