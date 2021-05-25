@@ -24,10 +24,10 @@ const DashboardRoutes = () =>{
       {/* <Route exact path="/loader" component={SunspotLoaderComponent} /> */}
       <Route exact path="/dashboard/neworder" component={Neworder} />
                 {/* <Route exact path="/404" component={Express404}/> */}
-                <Route exact path="/dashboard/help" component={Help} />
-                <Route exact path="/dashboard/payment" component={Payment} />
-                <Route exact path="/dashboard/checkout" component={CheckoutMM}/>
-                </Switch>
+      <Route exact path="/dashboard/help" component={Help} />
+      <Route exact path="/dashboard/payment" component={Payment} />
+    <Route exact path="/dashboard/checkout" component={CheckoutMM}/>
+    </Switch>
 
         </div>
     )

@@ -41,7 +41,12 @@ function Dashboard() {
               Hello New User
             </option>
 
-            <option>Logout</option>
+            <option>
+              {" "}
+              <Link to="/">
+                <p>Logout</p>{" "}
+              </Link>
+            </option>
           </select>
         </div>
       </div>

@@ -213,9 +213,9 @@ const Neworder = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onChange2}>
-            Cancle
+            Cancel
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button style={{fontSize:"15px"}}variant="primary" onClick={handleClose}>
             Proceed with Payment
           </Button>
         </Modal.Footer>
