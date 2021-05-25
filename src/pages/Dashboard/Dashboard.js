@@ -9,9 +9,20 @@ import Settings from "./img/settings.svg";
 import Help from "./img/help.svg";
 import Tracking from "./img/tracking.png";
 import DashboardRoutes from "../../DashboardRoutes";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function Dashboard() {
+
+  const history=useHistory()
+
+
+
+  const logout = () => {
+    alert("Thank You for Enjoying our Service")
+    history.push('/')
+  }
+  
   return (
     <div className={Dashboardcss.main}>
       <div className={Dashboardcss.uppertext}>
@@ -29,7 +40,7 @@ function Dashboard() {
           />
         </div>
         <div className={Dashboardcss.account}>
-          <select
+          {/* <select
             style={{
               height: "40px",
               width: "120px",
@@ -47,7 +58,11 @@ function Dashboard() {
                 <p>Logout</p>{" "}
               </Link>
             </option>
-          </select>
+          </select> */}
+        
+          <Button onClick={logout}>Logout</Button>
+         
+       
         </div>
       </div>
       <div className={Dashboardcss.maintext}>

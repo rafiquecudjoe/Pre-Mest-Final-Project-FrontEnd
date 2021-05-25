@@ -19,6 +19,11 @@ function Dashboard() {
   const gotopage = () => {
     history.push('/dashboard/neworder')
   }
+
+  const logout = () => {
+    alert("Thank You for Enjoying our Service")
+    history.push('/')
+  }
   
   return (
     <div className={Dashboardcss.main}>
@@ -37,7 +42,7 @@ function Dashboard() {
           />
         </div>
         <div className={Dashboardcss.account}>
-          <select
+          {/* <select
             style={{
               height: "40px",
               width: "120px",
@@ -49,7 +54,14 @@ function Dashboard() {
               Hello New User
             </option>
             <option>Logout</option>
-          </select>
+          </select> */}
+         
+        
+          <Button onClick={logout } text="Logout">Logout</Button>
+       
+          
+          
+       
         </div>
       </div>
       <div className={Dashboardcss.maintext}>
