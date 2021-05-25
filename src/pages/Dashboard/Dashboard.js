@@ -38,37 +38,35 @@ function Dashboard() {
             }}
           >
             <option defaultValue hidden>
-              Rafique Adam
+              Hello New User
             </option>
-            <option>
-              {/* <a href="http://localhost:3000/">Logout</a> */}
-              Logout
-            </option>
+
+            <option>Logout</option>
           </select>
         </div>
       </div>
       <div className={Dashboardcss.maintext}>
         <div className={Dashboardcss.leftmenu}>
           <ul>
-            <li style={{listStyle:"none"}}>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboarddefault">
                 <img src={dashboard} alt="dash" height="30px" width="30px" />
                 Dashboard
               </Link>
             </li>
-            <li style={{listStyle:"none"}}>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboard/sending">
                 <img src={Sending} alt="send" height="30px" width="30px" />
                 Sending
               </Link>
             </li>
-            <li style={{listStyle:"none"}}>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboard/receiving">
                 <img src={Receiving} alt="send" height="30px" width="30px" />
                 Receiving
               </Link>
             </li>
-            <li style={{listStyle:"none"}}>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboard/tracking">
                 <img src={Tracking} alt="send" height="30px" width="30px" />
                 Tracking
@@ -76,19 +74,19 @@ function Dashboard() {
             </li>
 
             <hr></hr>
-            <li style={{listStyle:"none"}}>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboarddefault">
                 <img src={Settings} alt="settings" height="30px" width="30px" />
                 Settings
               </Link>
             </li>
-            <li style={{listStyle:"none"}}>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboarddefault">
                 <img src={Billing} alt="billing" height="30px" width="30px" />
                 Billing
               </Link>
-            </li >
-            <li style={{listStyle:"none"}}>
+            </li>
+            <li style={{ listStyle: "none" }}>
               <Link to="/dashboard/help">
                 <img src={Help} alt="help" height="30px" width="30px" />
                 Help

@@ -46,7 +46,7 @@ function Dashboard() {
             }}
           >
             <option defaultValue hidden>
-              Rafique Adam
+              Hello New User
             </option>
             <option>Logout</option>
           </select>

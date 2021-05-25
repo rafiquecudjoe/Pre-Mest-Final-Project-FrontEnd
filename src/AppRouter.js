@@ -17,6 +17,7 @@ import Express404 from "./pages/404/Express404";
 import DashboardDefault from "./pages/Dashboard/Dashboarddefault";
 import Alert from "./components/pagecomponents/Alerts";
 import Payment from "./pages/payment/Payment"
+import CheckoutMM from "./pages/checkout/CheckoutMM.js";
 
 
 const AppRouter = () => {
@@ -43,7 +44,8 @@ const AppRouter = () => {
       <Route exact path="/dashboard/neworder" component={Dashboard} />
       <Route exact path="/alert" component={Alert} />
       <Route exact path="/dashboard/help" component={Dashboard} />
-      <Route exact path="/dashboard/payment" component={Dashboard}/>
+      <Route exact path="/dashboard/payment" component={Dashboard} />
+      <Route exact path="/dashboard/checkout" component={Dashboard}/>
       
     </Switch>
   );
