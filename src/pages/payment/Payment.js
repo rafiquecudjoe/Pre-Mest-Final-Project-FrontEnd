@@ -4,26 +4,59 @@ import { Form, Button } from "react-bootstrap";
 import image from "./payment.png";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
 function Payment(props) {
-  const [values, setValue] = useState("");
+  const history = useHistory();
+
+  const [values, setValue] = useState("");  //state variables for input fields
 
   const updateValue = (e) => setValue(e.target.value);
 
-  const history = useHistory();
+ //FLUTTERWAVE CONFIGURATIONS
+  const config = {
+    public_key: 'FLWPUBK_TEST-04f55d777feabcd1760bc82b687ecc14-X',
+    tx_ref: Date.now(),
+    amount: props.location.state.formCost,
+    currency: 'GHS',
+    payment_options: 'card,mobilemoney,ussd',
+    customer: {
+      email: 'user@gmail.com',
+      phonenumber: '',
+      name: 'joel ugwumadu',
+    },
+    customizations: {
+      title: 'Express Delivery Payments',
+      description: `Payment for ${props.location.state.formCityTo} to ${" "}
+      ${props.location.state.formCityFrom}`,
+      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+    },
+  };
 
+  const handleFlutterPayment = useFlutterwave(config);
+
+// BUTTON SUBMIT FUNCTION
   const gotopage = (e) => {
-    e.preventDefault();
-    console.log(values);
-    let calcCost = props.location.state.formCost;
+    
 
     if (values === "Pay with Mobile Money") {
-      history.push({
-        pathname: "/dashboard/checkout",
-        state: {
-          formCost: calcCost,
-        },
-      });
+      e.preventDefault();
+    console.log(values);
+    let calcCost = props.location.state.formCost;
+    handleFlutterPayment({
+      callback: (response) => {
+         console.log(response);
+          closePaymentModal() // this will close the modal programmatically
+      },
+      onClose: () => {},
+    });
+
+      // history.push({
+      //   pathname: "/dashboard/checkout",
+      //   state: {
+      //     formCost: calcCost,
+      //   },
+      // });
     } else {
       alert("Mobile Money Option ONLY Supported for now. Thank You");
     }

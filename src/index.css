@@ -1,4 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   /* overflow: scroll; */
 
@@ -16,16 +21,15 @@ nav {
   color: #fff;
   font-weight: 800;
 }
+ /* input {
+  height: 50%;
 
-input {
-  height: 50px;
-  width: 80%;
-  border-radius: 5px;
+ 
   
   
   padding: 5px 10px;
   margin: 6px;
-}
+}  */
 
 
 .btn{
