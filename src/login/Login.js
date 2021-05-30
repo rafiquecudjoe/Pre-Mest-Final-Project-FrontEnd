@@ -104,7 +104,7 @@ function Login() {
 
                 <p className="mt-4">
                   <Link
-                    className="text-sm font-medium text-green-600 dark:text-purple-400 hover:underline"
+                    className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
                     to="/forgot-password"
                   >
                     Forgot your password?
@@ -112,7 +112,7 @@ function Login() {
                 </p>
                 <p className="mt-1">
                   <Link
-                    className="text-sm font-medium text-green-600 dark:text-purple-400 hover:underline"
+                    className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
                     to="/create-account"
                   >
                     Create account

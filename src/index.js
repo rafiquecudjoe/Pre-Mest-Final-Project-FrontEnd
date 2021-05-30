@@ -1,19 +1,22 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
 import { Windmill } from "@windmill/react-ui";
-import myTheme from "./myTheme"
+import myTheme from "./myTheme";
+import { Suspense } from "react";
+import AppSuspense from "./AppSuspense";
+import React from 'react'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Windmill theme={myTheme}>
-        <App />
-      </Windmill>
+      <Suspense fallback={<AppSuspense/>}>
+        <Windmill theme={myTheme}>
+          <App />
+        </Windmill>
+      </Suspense>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

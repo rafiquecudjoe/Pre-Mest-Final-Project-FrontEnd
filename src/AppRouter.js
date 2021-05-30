@@ -1,7 +1,6 @@
-import Login from "./login/Login";
+
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { Switch, Route } from "react-router-dom";
-import Signup from "./Signup/Signup";
 import Banner from "./pages/Banner/Banner";
 import Arrays from "./Arrays";
 import Footer from "./Footer/Footer";
@@ -17,6 +16,11 @@ import DashboardDefault from "./pages/Dashboard/Dashboarddefault";
 import Alert from "./components/pagecomponents/Alerts";
 import Payment from "./pages/payment/Payment"
 import CheckoutMM from "./pages/checkout/CheckoutMM.js";
+import Header from "./pages/Dashboard/Header"
+import { lazy } from 'react'
+
+const Login = lazy(() => import('./login/Login'))
+const Signup = lazy(() => import('./Signup/Signup'))
 
 
 
@@ -44,6 +48,7 @@ const AppRouter = () => {
       <Route exact path="/dashboard/help" component={Dashboard} />
       <Route exact path="/dashboard/payment" component={Dashboard} />
       <Route exact path="/dashboard/checkout" component={Dashboard} />
+      <Route exaxt path="/header" component={Header}/>
   
      
       

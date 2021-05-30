@@ -1,24 +1,26 @@
 import React from "react";
-import { Link,useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { GithubIcon, TwitterIcon } from "../icons";
 import { Input, Label, Button } from "@windmill/react-ui";
 import ImageLight from "../asset/images/newsignup2.svg";
 import ImageDark from "../asset/images/newsignup2.svg";
-import { useState } from "react"
-import SunspotLoaderComponent from "../SunspotLoaderComponent"
+import { useState } from "react";
+import SunspotLoaderComponent from "../SunspotLoaderComponent";
 
 function Signup() {
+  const history = useHistory();
+  const [values, setValues] = useState({});
+  const [loader, setLoader] = useState(false);
 
-  const history=useHistory()  
-  const [values, setValues] = useState({})
-  const [loader, setLoader] = useState(false)
-  
-  
-  const updateValues = (e) => setValues({ ...values, [e.target.name]: e.target.value })
+  const updateValues = (e) =>
+    setValues({ ...values, [e.target.name]: e.target.value });
 
   const submit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setLoader(true);
+
+    try {
+    } catch (error) {}
 
     if (values.password === values.cpassword) {
       fetch("https://expressbackend3.herokuapp.com/api/v1/signup", {
@@ -29,9 +31,7 @@ function Signup() {
         },
       })
         .then((response) => response.json())
-        .then(
-          (responseData) => {
-            console.log(responseData);
+        .then((responseData) => {
             alert("Signup Successful");
             history.push("/newlogin");
           },
@@ -39,14 +39,9 @@ function Signup() {
         );
     } else {
       alert("Password Do not match");
-      setLoader(false);;
+      setLoader(false);
     }
-   
-    
-    
-  }
-  
-
+  };
 
   return (
     <div>
@@ -59,7 +54,6 @@ function Signup() {
                 className="object-cover w-full h-full dark:hidden"
                 src={ImageLight}
                 alt="Office"
-                
               />
               <img
                 aria-hidden="true"
@@ -85,7 +79,8 @@ function Signup() {
                 </Label>
                 <Label>
                   <span>Fullname</span>
-                  <Input className="mt-1"
+                  <Input
+                    className="mt-1"
                     type="text"
                     placeholder="John Doe"
                     name="fullname"
@@ -123,7 +118,7 @@ function Signup() {
                   </span>
                 </Label>
 
-                <Button  onClick={submit}  block className="mt-4">
+                <Button onClick={submit} block className="mt-4">
                   Create account
                 </Button>
 
@@ -140,7 +135,7 @@ function Signup() {
 
                 <p className="mt-4">
                   <Link
-                    className="text-sm font-medium text-green-400 dark:text-purple-400 hover:underline"
+                    className="text-sm font-medium text-green-400 dark:text-green-400 hover:underline"
                     to="/login"
                   >
                     Already have an account? Login
