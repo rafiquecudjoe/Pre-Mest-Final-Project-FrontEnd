@@ -46,7 +46,11 @@ function Payment(props) {
     handleFlutterPayment({
       callback: (response) => {
          console.log(response);
-          closePaymentModal() // this will close the modal programmatically
+        closePaymentModal() // this will close the modal programmatically
+        history.push({
+          pathname: '/dashboard/checkout', state: { formCost:calcCost
+          }
+        })
       },
       onClose: () => {},
     });
