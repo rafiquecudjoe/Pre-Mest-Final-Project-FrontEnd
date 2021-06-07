@@ -18,6 +18,8 @@ import Payment from "./pages/payment/Payment"
 import CheckoutMM from "./pages/checkout/CheckoutMM.js";
 import Header from "./pages/Dashboard/Header"
 import { lazy } from 'react'
+import Layout from "./pages/Layout";
+import Neworder from "./pages/Neworder/Neworder";
 
 const Login = lazy(() => import('./login/Login'))
 const Signup = lazy(() => import('./Signup/Signup'))
@@ -43,12 +45,13 @@ const AppRouter = () => {
       <Route exact path="/loader" component={SunspotLoaderComponent} />
       <Route exact path="/404" component={Express404} />
       <Route exact path="/dashboarddefault" component={DashboardDefault} />
-      <Route exact path="/dashboard/neworder" component={Dashboard} />
+     
       <Route exact path="/alert" component={Alert} />
       <Route exact path="/dashboard/help" component={Dashboard} />
-      <Route exact path="/dashboard/payment" component={Dashboard} />
-      <Route exact path="/dashboard/checkout" component={Dashboard} />
-      <Route exaxt path="/header" component={Header}/>
+      {/* <Route exact path="/dashboard/payment" component={Dashboard} />
+      <Route exact path="/dashboard/checkout" component={Dashboard} /> */}
+      <Route exaxt path="/header" component={Header} />
+      <Route path="/layout" component={Layout}/>
   
      
       

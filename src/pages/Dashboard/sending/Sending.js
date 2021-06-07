@@ -1,17 +1,14 @@
-import Dashboardcss from "../Dashboard.module.css"
+import Dashboardcss from "../Dashboard.module.css";
 import urban from "../../../urban1.png";
 import Button from "../../../components/appcomponents/button";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 const Sending = () => {
-
-
-  const history = useHistory()
+  const history = useHistory();
 
   const gotopage = () => {
-    history.push('/dashboard/neworder')
-    
-  }
+    history.push("neworder");
+  };
   return (
     <div className={Dashboardcss.main}>
       <div className={Dashboardcss.inputtext2}>
@@ -20,20 +17,21 @@ const Sending = () => {
             <div className={Dashboardcss.welcom}>
               <h2>Welcome to Express Delivery!</h2>
             </div>
-            
-                <p className={Dashboardcss.this}>
-                  This is your dashboard where you can book parcels, print
-                  delivery <br />
-                  labels and track everything you send.
-                </p>
-                <p className={Dashboardcss.we}>
-                  We also have loads of great information in our Help Centre to
-                  get <br />
-                  you started
-                </p>
+
+            <p className={Dashboardcss.this}>
+              This is your dashboard where you can book parcels, print delivery{" "}
+              <br />
+              labels and track everything you send.
+            </p>
+            <p className={Dashboardcss.we}>
+              We also have loads of great information in our Help Centre to get{" "}
+              <br />
+              you started
+            </p>
           </div>
           <div className={Dashboardcss.buttons}>
-            <Button onClick={gotopage}
+            <Button
+              onClick={gotopage}
               className={Dashboardcss.btn}
               style={{
                 width: "30%",
@@ -62,5 +60,3 @@ const Sending = () => {
 };
 
 export default Sending;
-
-

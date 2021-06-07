@@ -7,17 +7,20 @@ import { Windmill } from "@windmill/react-ui";
 import myTheme from "./myTheme";
 import { Suspense } from "react";
 import AppSuspense from "./AppSuspense";
-import React from 'react'
+import React from "react";
+import { SidebarProvider } from "./store/SidebarContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Suspense fallback={<AppSuspense/>}>
-        <Windmill theme={myTheme}>
-          <App />
-        </Windmill>
-      </Suspense>
-    </BrowserRouter>
+    <SidebarProvider>
+      <BrowserRouter>
+        <Suspense fallback={<AppSuspense />}>
+          <Windmill theme={myTheme}>
+            <App />
+          </Windmill>
+        </Suspense>
+      </BrowserRouter>
+    </SidebarProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

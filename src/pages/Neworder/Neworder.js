@@ -3,41 +3,38 @@ import Alertcss from "../../components/pagecomponents/Alerts.module.css";
 import corodel from "./corodel.svg";
 import Form from "react-bootstrap/Form";
 import { Button, Modal } from "react-bootstrap";
-import { useState } from "react";
-import {useHistory} from "react-router-dom"
+import { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import { SidebarContext } from "../../store/SidebarContext";
 
 const Neworder = () => {
   const [show, setShow] = useState(false);
   const [values, setValues] = useState({});
+  const { order, setOrder } = useContext(SidebarContext);
 
-  const history=useHistory()
+  const history = useHistory();
 
-  const [calcCost, setCalCost] = useState(0)
-  
+  const [calcCost, setCalCost] = useState(0);
 
   const onChange2 = () => {
-    setShow(false)
-    
-    }
-    
-
+    setShow(false);
+  };
 
   const handleClose = () => {
-    setShow(false)
+    setShow(false);
     if (calcCost > 1) {
-      history.push({
-        pathname: '/dashboard/payment', state: { formCityTo: values.cityto,formCost:calcCost,formCityFrom:values.cityfrom
-        }
-      })
-      
-    } else {
-      alert('Unable to Calculate cost')
-      history.push('/dashboard/neworder')
+      setOrder({
+        formCityTo: values.cityto,
+        formCost: calcCost,
+        formCityFrom: values.cityfrom,
+      });
 
-      
+      history.push("payment");
+    } else {
+      alert("Unable to Calculate cost");
+      history.push("/dashboard/neworder");
     }
-    
-    
+
     // history.push('/payment')
   };
 
@@ -48,45 +45,28 @@ const Neworder = () => {
   const handleShow = (e) => {
     e.preventDefault();
 
- 
-  
-  
-      if ((values.cityfrom === "Ahodwo") && (values.cityto === "Asokwa")) {
-        setCalCost(8.00)
-            }
-            else  if ((values.cityfrom === "Ahodwo") && (values.cityto === "Tech")) {
-              setCalCost(7.00)
-            }
-            else  if ((values.cityfrom === "Ahodwo") && (values.cityto === "Ahodwo")) {
-              setCalCost(5.00)
-                  } 
-            else  if ((values.cityfrom === "Asokwa") && (values.cityto === "Asokwa")) {
-              setCalCost(5.00)
-            }
-            else  if ((values.cityfrom === "Asokwa") && (values.cityto === "Ahodwo")) {
-              setCalCost(9.00)
-            }
-            else  if ((values.cityfrom === "Asokwa") && (values.cityto === "Tech")) {
-              setCalCost(10.00)
-            }
-            else  if ((values.cityfrom === "Tech") && (values.cityto === "Asokwa")) {
-              setCalCost(8.00)
-            }
-            else if ((values.cityfrom === "Tech") && (values.cityto === "Ahodwo")) {
-              setCalCost(10.00)
-            }
-            else if ((values.cityfrom === "Tech") && (values.cityto === "Tech")) {
-              setCalCost(5.00)
-                  } 
-        
-  
- 
+    if (values.cityfrom === "Ahodwo" && values.cityto === "Asokwa") {
+      setCalCost(8.0);
+    } else if (values.cityfrom === "Ahodwo" && values.cityto === "Tech") {
+      setCalCost(7.0);
+    } else if (values.cityfrom === "Ahodwo" && values.cityto === "Ahodwo") {
+      setCalCost(5.0);
+    } else if (values.cityfrom === "Asokwa" && values.cityto === "Asokwa") {
+      setCalCost(5.0);
+    } else if (values.cityfrom === "Asokwa" && values.cityto === "Ahodwo") {
+      setCalCost(9.0);
+    } else if (values.cityfrom === "Asokwa" && values.cityto === "Tech") {
+      setCalCost(10.0);
+    } else if (values.cityfrom === "Tech" && values.cityto === "Asokwa") {
+      setCalCost(8.0);
+    } else if (values.cityfrom === "Tech" && values.cityto === "Ahodwo") {
+      setCalCost(10.0);
+    } else if (values.cityfrom === "Tech" && values.cityto === "Tech") {
+      setCalCost(5.0);
+    }
+
     setShow(true);
-
   };
-
-
- 
 
   return (
     <div className={Newordercss.main}>
@@ -209,13 +189,18 @@ const Neworder = () => {
           <Modal.Title>Price Quote</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ textAlign: "center" }}>
-          You are to Pay Ghc{calcCost} as delivery cost from {values.cityfrom} to {values.cityto}
+          You are to Pay Ghc{calcCost} as delivery cost from {values.cityfrom}{" "}
+          to {values.cityto}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onChange2}>
             Cancel
           </Button>
-          <Button style={{fontSize:"15px"}}variant="primary" onClick={handleClose}>
+          <Button
+            style={{ fontSize: "15px" }}
+            variant="primary"
+            onClick={handleClose}
+          >
             Proceed with Payment
           </Button>
         </Modal.Footer>
