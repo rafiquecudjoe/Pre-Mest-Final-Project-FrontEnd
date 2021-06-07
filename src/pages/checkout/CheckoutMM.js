@@ -1,12 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import checkoutMmcss from "./Checkout.module.css"
 import Button from "react-bootstrap/Button"
 import image from "./ordercomplete.svg"
 import {useHistory} from "react-router-dom"
+import { SidebarContext } from '../../store/SidebarContext'
 
 function CheckoutMM(props) {
 
     const history = useHistory()
+    const {formCost} = useContext(SidebarContext)
     
     const gotopage = () => history.push('/dashboarddefault')
     const gotohome = () => {
@@ -18,7 +20,7 @@ function CheckoutMM(props) {
     return (
         <div className={checkoutMmcss.main}>
             <div className={checkoutMmcss.Text}>
-                <p>Please you are required to pay an amount of Ghc{props.location.state.formCost} into the MTN Momo Details Below.</p>
+                <p>Please you are required to pay an amount of Ghc{formCost} into the MTN Momo Details Below.</p>
                 <p>Momo Name- RAFIQUE ADAM CUDJOE</p>
                 <p>Momo Number- 0544413229</p>
                 <p>Please keep your Transcation ID so you give to the agent who will pick your parcel or the agent at our nearest center. Thank You.</p>
