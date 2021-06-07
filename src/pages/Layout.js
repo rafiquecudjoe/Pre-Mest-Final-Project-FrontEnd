@@ -37,7 +37,7 @@ function Layout() {
                   <Route
                     key={i}
                     exact={true}
-                    path={`/layout${route.path}`}
+                    path={`/dashboard${route.path}`}
                     render={(props) => <route.component {...props} />}
                   />
                 ) : null;

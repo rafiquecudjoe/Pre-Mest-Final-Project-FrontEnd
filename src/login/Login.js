@@ -24,7 +24,7 @@ function Login() {
       .then(
         (res) => {
           if (res.success) {
-            history.push("/dashboarddefault");
+            history.push("/dashboard/dashdefault");
           } else if (res.failure) {
             // display
             alert("Wrong Username or Password");

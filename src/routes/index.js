@@ -9,6 +9,7 @@ const Receiving = lazy(() => import("../pages/Dashboard/Receiving/Receiving"));
 const Help = lazy(() => import("../pages/Dashboard/Help/Help"));
 const Payment = lazy(() => import("../pages/payment/Payment"));
 const Checkout = lazy(() => import("../pages/checkout/CheckoutMM"));
+const Dashboarddefault = lazy(()=> import('../pages/Dashboard/Dashboarddefault'))
 
 /**
  * ⚠ These are internal routes!
@@ -66,6 +67,10 @@ const routes = [
     path: "/checkout",
     component: Checkout,
   },
+  {
+    path: '/dashdefault',
+    component: Dashboarddefault
+  }
 ];
 
 export default routes;
