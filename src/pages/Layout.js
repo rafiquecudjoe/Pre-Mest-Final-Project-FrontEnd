@@ -12,17 +12,17 @@ const Page404 = lazy(() => import("../pages/404/Express404"));
 const Neworder = lazy(() => import("../pages/Neworder/Neworder"));
 
 function Layout() {
-  const { value } = useContext(SidebarContext);
+  const { isSidebarOpen, closeSidebar } = useContext(SidebarContext);
   let location = useLocation();
 
   useEffect(() => {
-    value.closeSidebar();
+   closeSidebar();
   }, [location]);
 
   return (
     <div
       className={`flex h-screen bg-gray-50 dark:bg-gray-900 ${
-        value.isSidebarOpen && "overflow-hidden"
+       isSidebarOpen && "overflow-hidden"
       }`}
     >
       <Sidebar />

@@ -1,7 +1,7 @@
 import Dashboardcss from "../Dashboard.module.css";
 import urban from "../../../urban1.png";
-import Button from "../../../components/appcomponents/button";
 import { useHistory } from "react-router-dom";
+import { Button } from "@windmill/react-ui";
 
 const Sending = () => {
   const history = useHistory();
@@ -30,25 +30,9 @@ const Sending = () => {
             </p>
           </div>
           <div className={Dashboardcss.buttons}>
-            <Button
-              onClick={gotopage}
-              className={Dashboardcss.btn}
-              style={{
-                width: "30%",
-                height: "50px",
-                border: "none",
-              }}
-              text="Send Parcel"
-            />
-            <Button
-              style={{
-                width: "30%",
-                height: "50px",
+            <Button onClick={gotopage}>Send Parcel</Button>
 
-                border: "none",
-              }}
-              text="Get quote"
-            />
+            <Button className="mx-6" layout="outline">Get quote</Button>
           </div>
         </div>
         <div className={Dashboardcss.img2}>

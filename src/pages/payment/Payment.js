@@ -5,11 +5,11 @@ import image from "./payment.png";
 import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
-import { SidebarContext } from "../../store/SidebarContext";
+import { myContext } from "../../store/Context";
 
 function Payment(props) {
   const history = useHistory();
-  const { order } = useContext(SidebarContext);
+  const { order } = useContext(myContext);
   const { formCityTo, formCityFrom, formCost } = order;
 
   const [values, setValue] = useState(""); //state variables for input fields

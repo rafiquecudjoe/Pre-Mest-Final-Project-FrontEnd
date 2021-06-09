@@ -5,12 +5,12 @@ import Form from "react-bootstrap/Form";
 import { Button, Modal } from "react-bootstrap";
 import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { SidebarContext } from "../../store/SidebarContext";
+import { myContext } from "../../store/Context";
 
 const Neworder = () => {
   const [show, setShow] = useState(false);
   const [values, setValues] = useState({});
-  const { order, setOrder } = useContext(SidebarContext);
+  const { order, setOrder } = useContext(myContext);
 
   const history = useHistory();
 

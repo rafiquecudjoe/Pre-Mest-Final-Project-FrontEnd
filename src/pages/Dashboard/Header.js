@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-// import { SidebarContext } from '../context/SidebarContext';
+import {SidebarContext} from '../../store/SidebarContext';
 import {
     SearchIcon,
     MoonIcon,
@@ -14,7 +14,7 @@ import { Avatar, Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@
 
 function Header() {
     const { mode, toggleMode } = useContext(WindmillContext)
-    // const { toggleSidebar } = useContext(SidebarContext)
+    const { toggleSidebar } = useContext(SidebarContext)
   
     const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
@@ -32,7 +32,7 @@ function Header() {
             {/* <!-- Mobile hamburger --> */}
             <button
               className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-green"
-            //   onClick={toggleSidebar}
+              onClick={toggleSidebar}
               aria-label="Menu"
             >
               <MenuIcon className="w-6 h-6" aria-hidden="true" />

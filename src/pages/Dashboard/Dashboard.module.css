@@ -107,11 +107,6 @@
   align-items: flex-end;
 }
 
-.buttons {
-  display: flex;
-  flex: 0.3;
-  justify-content: space-evenly;
-}
 
 .leftmenu img {
   margin-right: 10px;

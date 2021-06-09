@@ -2,7 +2,7 @@ import Dashboardcss from "./Dashboard.module.css";
 import logo3 from "../Banner/img/expresslogo2.png";
 import InputField from "../../components/appcomponents/InputField";
 import urban from "../../urban1.png";
-import Button from "../../components/appcomponents/button";
+import { Button } from "@windmill/react-ui";
 
 import { Link,useHistory } from "react-router-dom";
 
@@ -54,28 +54,13 @@ function Dashboard() {
                   you started
                 </p>
               </div>
-              <div className={Dashboardcss.buttons}>
-                <Button
-                  onClick={gotopage}
-                  style={{
-                    width: "30%",
-                    height: "50px",
-                    backgroundColor: "#93C3FF",
-                    border: "none",
-                  }}
-                  text="Send Parcel"
-                />
-                <Button
-                  
+            <div className={Dashboardcss.buttons}>
+              
+              <Button  onClick={gotopage} layout="outline">Send Parcel</Button>
+               
                  
-                  style={{
-                    width: "30%",
-                    height: "50px",
-                    backgroundColor: "#93C3FF",
-                    border: "none",
-                  }}
-                  text="Get quote"
-                />
+                  
+                <Button size="regular" className="mx-6 ">Get Quote</Button>
               </div>
             </div>
             <div className={Dashboardcss.img2}>

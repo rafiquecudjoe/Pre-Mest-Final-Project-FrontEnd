@@ -9,18 +9,23 @@ import { Suspense } from "react";
 import AppSuspense from "./AppSuspense";
 import React from "react";
 import { SidebarProvider } from "./store/SidebarContext";
+import {MyProvider} from "./store/Context"
 
 ReactDOM.render(
   <React.StrictMode>
+    <MyProvider>
     <SidebarProvider>
       <BrowserRouter>
         <Suspense fallback={<AppSuspense />}>
-          <Windmill theme={myTheme}>
+          <Windmill theme={myTheme} usePreferences dark>
             <App />
           </Windmill>
         </Suspense>
       </BrowserRouter>
     </SidebarProvider>
+
+    </MyProvider>
+  
   </React.StrictMode>,
   document.getElementById("root")
 );

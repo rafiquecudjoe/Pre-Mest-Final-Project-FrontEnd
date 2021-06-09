@@ -1,14 +1,17 @@
 import React from "react";
-import { Link,useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ImageLight from "../asset/images/newlogin.svg";
 import ImageDark from "../asset/images/newlogin.svg";
 import { GithubIcon, TwitterIcon } from "../icons";
 import { Label, Input, Button } from "@windmill/react-ui";
 import { useState } from "react";
+import Alerts from "../components/appcomponents/Alert"
+
 
 function Login() {
-  const history=useHistory()
+  const history = useHistory();
   const [values, setValues] = useState({});
+  const [alert, setAlert] = useState(false);
 
   const updateValues = (e) =>
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -26,10 +29,10 @@ function Login() {
           if (res.success) {
             history.push("/dashboard/dashdefault");
           } else if (res.failure) {
-            // display
-            alert("Wrong Username or Password");
+          
+            
           } else if (res.goaway) {
-            alert("User Doesn't Exist");
+            setAlert(true);
           }
         },
         (err) => console.log(err)
@@ -57,6 +60,16 @@ function Login() {
             </div>
             <main className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
               <div className="w-full">
+                {alert ? (
+                  <Alerts
+                    text="User Does not Exist"
+                    className="text-center text-black font-bold "
+                    type="danger"
+                    onClose={() => setAlert(false)}
+                  />
+                ) : (
+                  <></>
+                )}
                 <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
                   Login
                 </h1>

@@ -4,11 +4,7 @@ import React, { useState, useMemo } from "react";
 export const SidebarContext = React.createContext();
 
 export const SidebarProvider = ({ children }) => {
-  const [order, setOrder] = useState({
-    formCityTo: "",
-    formCost: "",
-    formCityFrom: "",
-  });
+ 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   function toggleSidebar() {
@@ -19,7 +15,7 @@ export const SidebarProvider = ({ children }) => {
     setIsSidebarOpen(false);
   }
 
-  const value = useMemo(
+  const values = useMemo(
     () => ({
       isSidebarOpen,
       toggleSidebar,
@@ -29,7 +25,7 @@ export const SidebarProvider = ({ children }) => {
   );
 
   return (
-    <SidebarContext.Provider value={{ value, order, setOrder }}>
+    <SidebarContext.Provider value={values }>
       {children}
     </SidebarContext.Provider>
   );
