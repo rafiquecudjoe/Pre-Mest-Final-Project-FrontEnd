@@ -1,0 +1,15 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    /* height: 100vh; */
+}
+
+.Text{
+    flex: 0.5;
+    
+}
+
+.image{
+    flex: 0.5;
+
+}
