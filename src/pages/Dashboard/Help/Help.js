@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Helpcss from "./Help.module.css"
-import FAQ from "../../../F.A.Q/FAQ"
+import FAQ from "../../LandingPage/F.A.Q/FAQ"
 
 
 function Help() {

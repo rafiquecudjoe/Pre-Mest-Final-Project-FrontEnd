@@ -18,7 +18,7 @@ const Review3 = () => {
             <br />
             and in the first few months
             <br />
-            I saved over $1000. It has bee
+            I saved over GHc1000. It has bee
             <br />
             so good for our business!"
             <br />

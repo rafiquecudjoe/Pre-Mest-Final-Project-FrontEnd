@@ -1,18 +1,19 @@
 import AppRouter from "./AppRouter";
+import Neworder2 from "./Neworder2"
 
 
-import { MyProvider } from "./store/Context";
+
 
 
 function App() {
   return (
     <div>
      
-
-      <MyProvider>
+{/* <Neworder2/> */}
+     
         {/* <BoxLoaderComponent/> */}
         <AppRouter />
-      </MyProvider>
+     
     </div>
   );
 }

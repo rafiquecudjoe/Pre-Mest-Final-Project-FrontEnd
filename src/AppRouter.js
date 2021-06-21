@@ -1,23 +1,21 @@
-import Login from "./pages/Login/Login";
-import Dashboard from "./pages/Dashboard/Dashboard";
 import { Switch, Route } from "react-router-dom";
-import Signup from "./pages/Signup/Signup";
-import Banner from "./pages/Banner/Banner";
-import Arrays from "./Arrays";
-import Footer from "./Footer/Footer";
-import Navbar from "./components/appcomponents/Navbar";
-import Reviews from "./Reviews/Reviews";
-import LandingPage from "./LandingPage";
-import Features from "./Features/Features";
-import FAQ from "./F.A.Q/FAQ";
+import Banner from "./pages/LandingPage/Banner/Banner";
+// import Navbar from "./components/appcomponents/Navbar";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import Features from "./pages/LandingPage/Features/Features";
+import FAQ from "./pages/LandingPage/F.A.Q/FAQ";
 import "./App.css";
-import SunspotLoaderComponent from "./SunspotLoaderComponent"
-import SendNow from "./pages/SendNow/SendNow"
-import Express404 from "./pages/404/Express404"
-import DashboardDefault from "./pages/Dashboard/Dashboarddefault"
-import Neworder from "./pages/Neworder/Neworder"
-import Alert from "./components/pagecomponents/Alerts"
-import Help from "./pages/Dashboard/Help/Help"
+import Express404 from "./pages/404/Express404";
+import Header from "./pages/Dashboard/Header";
+import { lazy } from "react";
+import Layout from "./pages/Dashboard/Layout";
+import Navbar from "./pages/LandingPage/Navbar";
+
+
+const Login = lazy(() => import("./pages/Login"));
+const Signup = lazy(() => import("./pages/Signup"));
+const ForgotPassword = lazy(() => import('./pages/ForgotPassword'))
+const PasswordReset = lazy(()=> import('./pages/PasswordReset'))
 
 const AppRouter = () => {
   return (
@@ -26,24 +24,18 @@ const AppRouter = () => {
       <Route exact path="/features" component={Features} />
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/banner" component={Banner} />
-      <Route exact path="/nav" component={Navbar} />
+      {/* <Route exact path="/nav" component={Navbar} /> */}
       <Route exact path="/login" component={Login} />
       {/* <Route exact path="/dashboard" component={Dashboard} /> */}
       <Route exact path="/signup" component={Signup} />
-      <Route exact path="/reviews" component={Reviews} />
-      <Route exact path="/footer" component={Footer} />
-      <Route exact path="/arrays" component={Arrays} />
-      <Route exact path="/dashboard/sending" component={Dashboard} />
-      <Route exact path="/dashboard/receiving" component={Dashboard} />
-      <Route exact path="/dashboard/tracking" component={Dashboard} />
-      <Route exact path="/loader" component={SunspotLoaderComponent} />
-      <Route exact path="/sendnow" component={SendNow} />
+      <Route exact path='/forgot' component={ForgotPassword} />
+      <Route exact path="/passreset" component={PasswordReset}/>
       <Route exact path="/404" component={Express404} />
-      <Route exact path="/dashboarddefault" component={DashboardDefault} />
-      <Route exact path="/dashboard/neworder" component={Dashboard} />
-      <Route exact path="/alert" component={Alert} />
-      <Route exact path="/dashboard/help" component={Dashboard}/>
-      
+      {/* <Route exact path="/dashboard/payment" component={Dashboard} />
+      <Route exact path="/dashboard/checkout" component={Dashboard} /> */}
+      <Route exaxt path="/header" component={Header} />
+      <Route path="/dashboard" component={Layout} />
+      <Route exact path='/navbar' component={Navbar}/>
     </Switch>
   );
 };
