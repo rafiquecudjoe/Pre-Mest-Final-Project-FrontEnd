@@ -1,11 +1,10 @@
 import Newordercss from "./Neworder.module.css";
-import Alertcss from "../../components/pagecomponents/Alerts.module.css";
 import corodel from "./corodel.svg";
 import Form from "react-bootstrap/Form";
 import { Button, Modal } from "react-bootstrap";
 import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { myContext } from "../../store/Context";
+import { myContext } from "../../../store/Context";
 
 const Neworder = () => {
   const [show, setShow] = useState(false);

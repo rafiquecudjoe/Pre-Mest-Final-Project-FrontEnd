@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import image from "./ordercomplete.svg";
 import { useHistory } from "react-router-dom";
 
-import { myContext } from "../../store/Context";
+import { myContext } from "../../../store/Context";
 
 function CheckoutMM(props) {
   const history = useHistory();

@@ -1,15 +1,16 @@
 import Bannercss from "../Banner/Banner.module.css";
-import Button from "../../components/appcomponents/button";
+import Button from "../../../components/appcomponents/button";
 import { useHistory } from "react-router-dom";
-import expresslogo from "./img/expresslogo2.png"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import NavbarCom from "../Navbar";
+import lazy from "react"
 
 const Banner = () => {
+
+
+  
   const history = useHistory();
 
-  const lg = () => {
-    history.push("/login");
-  };
 
   const sg = () => {
     history.push("/signup");
@@ -18,17 +19,18 @@ const Banner = () => {
   return (
     <div className={Bannercss.maindiv}>
       <div className={Bannercss.nav}>
-        <div className={Bannercss.logo}>
+        <NavbarCom/>
+        {/* <div className={Bannercss.logo}>
           <img src={expresslogo} alt="logo" height="100%" width="100%"/>
-        </div>
-        <div className={Bannercss.menulinks}>
+        </div> */}
+        {/* <div className={Bannercss.menulinks}>
           <Link to="/">HOME</Link>
           <Link to="/">PRICING</Link>
           <Link to="/">TRACKING</Link>
           <Link to="/">ABOUT</Link>
           <Link to="/"> CONTACT US</Link>
-        </div>
-        <div className={Bannercss.navbuttons}>
+        </div> */}
+        {/* <div className={Bannercss.navbuttons}>
           <Button style={{
             width: "45%",
             height: "50px"
@@ -38,7 +40,7 @@ const Banner = () => {
               width: "45%",
               height: "50px"
             }} className="btn" text="SIGNUP" onClick={sg} />
-        </div>
+        </div> */}
       </div>
       <div className={Bannercss.main}>
         <div className={Bannercss.text_container}>

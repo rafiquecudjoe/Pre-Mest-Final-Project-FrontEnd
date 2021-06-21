@@ -1,15 +1,15 @@
 import React, { useContext, Suspense, useEffect, lazy } from "react";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
-import routes from "../routes";
+import routes from "../../routes";
 
-import Sidebar from "../components/Sidebar";
-import Header from "../pages/Dashboard/Header";
-import Main from "../pages/Main";
-import AppSuspense from "../AppSuspense";
-import { SidebarContext } from "../store/SidebarContext";
+import Sidebar from "../../components/Sidebar";
+import Header from "../../pages/Dashboard/Header";
+import Main from "../../pages/Dashboard/Main";
+import AppSuspense from "../../AppSuspense";
+import { SidebarContext } from "../../store/SidebarContext";
 
-const Page404 = lazy(() => import("../pages/404/Express404"));
-const Neworder = lazy(() => import("../pages/Neworder/Neworder"));
+const Page404 = lazy(() => import("../../pages/404/Express404"));
+const Neworder = lazy(() => import("../../pages/Dashboard/Neworder/Neworder"));
 
 function Layout() {
   const { isSidebarOpen, closeSidebar } = useContext(SidebarContext);

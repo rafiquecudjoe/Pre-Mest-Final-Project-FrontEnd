@@ -5,7 +5,7 @@ import image from "./payment.png";
 import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
-import { myContext } from "../../store/Context";
+import { myContext } from "../../../store/Context";
 
 function Payment(props) {
   const history = useHistory();

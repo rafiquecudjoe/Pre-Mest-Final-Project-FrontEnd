@@ -3,12 +3,12 @@ import { lazy } from "react";
 // use lazy for better code splitting, a.k.a. load faster
 const Express404 = lazy(() => import("../pages/404/Express404"));
 const Sending = lazy(() => import("../pages/Dashboard/sending/Sending"));
-const Neworder = lazy(() => import("../pages/Neworder/Neworder"));
+const Neworder = lazy(() => import("../pages/Dashboard/Neworder/Neworder"));
 const Tracking = lazy(() => import("../pages/Dashboard/Tracking/Tracking"));
 const Receiving = lazy(() => import("../pages/Dashboard/Receiving/Receiving"));
 const Help = lazy(() => import("../pages/Dashboard/Help/Help"));
-const Payment = lazy(() => import("../pages/payment/Payment"));
-const Checkout = lazy(() => import("../pages/checkout/CheckoutMM"));
+const Payment = lazy(() => import("../pages/Dashboard/payment/Payment"));
+const Checkout = lazy(() => import("../pages/Dashboard/checkout/CheckoutMM"));
 const Dashboarddefault = lazy(()=> import('../pages/Dashboard/Dashboarddefault'))
 
 /**

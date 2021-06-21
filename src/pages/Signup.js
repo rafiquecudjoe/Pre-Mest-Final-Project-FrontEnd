@@ -1,16 +1,17 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import ImageLight from "../asset/images/newlogin.svg";
-import ImageDark from "../asset/images/newlogin.svg";
 import { GithubIcon, TwitterIcon } from "../icons";
-import { Label, Input, Button } from "@windmill/react-ui";
+import { Input, Label, Button } from "@windmill/react-ui";
+import ImageLight from "../asset/images/newsignup2.svg";
+import ImageDark from "../asset/images/newsignup2.svg";
 import { useState } from "react";
-import Alerts from "../components/appcomponents/Alert"
+import Alerts from "../components/appcomponents/Alert";
+import LoaderComp from "../components/appcomponents/LoaderComp";
 
-
-function Login() {
+function Signup() {
   const history = useHistory();
   const [values, setValues] = useState({});
+  const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(false);
 
   const updateValues = (e) =>
@@ -18,25 +19,39 @@ function Login() {
 
   const submit = (e) => {
     e.preventDefault();
-    fetch("https://expressbackend3.herokuapp.com/api/v1/login", {
-      method: "POST",
-      body: JSON.stringify(values),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then(
-        (res) => {
-          if (res.success) {
-            history.push("/dashboard/dashdefault");
-          } else if (res.failure) {
-          
-            
-          } else if (res.goaway) {
-            setAlert(true);
-          }
+    if (values.password === values.cpassword) {
+      setLoading(true);
+      fetch("http://localhost:5000/api/v1/signup", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
         },
-        (err) => console.log(err)
-      );
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          if (response.success == true) {
+            setLoading(false);
+            setAlert(true);
+            history.push("/login");
+            
+          } else {
+            if (response.success == false) {
+              setLoading(false)
+              
+
+
+              
+            }
+            
+          }
+           
+          },
+          (err) => console.log(err)
+        );
+    } else {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,16 +77,16 @@ function Login() {
               <div className="w-full">
                 {alert ? (
                   <Alerts
-                    text="User Does not Exist"
+                    text="Signup Successful"
                     className="text-center text-black font-bold "
-                    type="danger"
+                    type="success"
                     onClose={() => setAlert(false)}
                   />
                 ) : (
                   <></>
                 )}
                 <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
-                  Login
+                  Create account
                 </h1>
                 <Label>
                   <span>Email</span>
@@ -83,26 +98,62 @@ function Login() {
                     onChange={updateValues}
                   />
                 </Label>
+                <Label>
+                  <span>Fullname</span>
+                  <Input
+                    className="mt-1"
+                    type="text"
+                    placeholder="John Doe"
+                    name="fullname"
+                    onChange={updateValues}
+                  />
+                </Label>
 
                 <Label className="mt-4">
                   <span>Password</span>
                   <Input
                     className="mt-1"
-                    type="password"
                     placeholder="***************"
+                    type="password"
                     name="password"
                     onChange={updateValues}
                   />
                 </Label>
 
-                <Button
-                  className="mt-4"
-                  block
-                  underline="none"
-                  onClick={submit}
-                >
-                  Log in
+                <Label className="mt-4">
+                  <span>Confirm password</span>
+                  <Input
+                    className="mt-1"
+                    placeholder="***************"
+                    type="password"
+                    name="cpassword"
+                    onChange={updateValues}
+                  />
+                </Label>
+
+                <Label className="mt-6" check>
+                  <Input type="checkbox" />
+                  <span className="ml-2">
+                    I agree to the{" "}
+                    <span className="underline">privacy policy</span>
+                  </span>
+                </Label>
+
+                <Button onClick={submit} block className="mt-4">
+                  Create account
                 </Button>
+                {loading ? (
+                  <LoaderComp
+                    className="mx-48 my-2 md:mx-36"
+                    type="Circles"
+                    color="grey"
+                    height="30"
+                    width="30"
+                    timeout="500000"
+                  />
+                ) : (
+                  <></>
+                )}
 
                 <hr className="my-8" />
 
@@ -110,25 +161,17 @@ function Login() {
                   <GithubIcon className="w-4 h-4 mr-2" aria-hidden="true" />
                   Github
                 </Button>
-                <Button className="mt-4" block layout="outline">
+                <Button block className="mt-4" layout="outline">
                   <TwitterIcon className="w-4 h-4 mr-2" aria-hidden="true" />
                   Twitter
                 </Button>
 
                 <p className="mt-4">
                   <Link
-                    className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
-                    to="/forgot-password"
+                    className="text-sm font-medium text-green-400 dark:text-green-400 hover:underline"
+                    to="/login"
                   >
-                    Forgot your password?
-                  </Link>
-                </p>
-                <p className="mt-1">
-                  <Link
-                    className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
-                    to="/create-account"
-                  >
-                    Create account
+                    Already have an account? Login
                   </Link>
                 </p>
               </div>
@@ -140,4 +183,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

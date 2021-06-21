@@ -1,5 +1,5 @@
 import Dashboardcss from "./Dashboard.module.css";
-import logo3 from "../Banner/img/expresslogo2.png";
+import logo3 from "../LandingPage/Banner/img/expresslogo2.png";
 import InputField from "../../components/appcomponents/InputField";
 import urban from "../../urban1.png";
 import { Button } from "@windmill/react-ui";

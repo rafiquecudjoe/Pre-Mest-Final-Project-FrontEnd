@@ -1,5 +1,5 @@
 import Footercss from "../Footer/Footer.module.css";
-import elogo from "../ExpressDelivery.png";
+import elogo from "../../../ExpressDelivery.png";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,

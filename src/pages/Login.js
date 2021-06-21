@@ -1,46 +1,44 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
+import ImageLight from "../asset/images/newlogin.svg";
+import ImageDark from "../asset/images/newlogin.svg";
 import { GithubIcon, TwitterIcon } from "../icons";
-import { Input, Label, Button } from "@windmill/react-ui";
-import ImageLight from "../asset/images/newsignup2.svg";
-import ImageDark from "../asset/images/newsignup2.svg";
+import { Label, Input, Button } from "@windmill/react-ui";
 import { useState } from "react";
-import SunspotLoaderComponent from "../SunspotLoaderComponent";
+import Alerts from "../components/appcomponents/Alert";
+import LoaderComp from "../components/appcomponents/LoaderComp";
 
-function Signup() {
+function Login(props) {
   const history = useHistory();
   const [values, setValues] = useState({});
-  const [loader, setLoader] = useState(false);
+  const [alert, setAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const updateValues = (e) =>
     setValues({ ...values, [e.target.name]: e.target.value });
 
   const submit = (e) => {
     e.preventDefault();
-    setLoader(true);
-
-    try {
-    } catch (error) {}
-
-    if (values.password === values.cpassword) {
-      fetch("https://expressbackend3.herokuapp.com/api/v1/signup", {
-        method: "POST",
-        body: JSON.stringify(values),
-        headers: {
-          "Content-Type": "application/json",
+    setLoading(true)
+    fetch("https://espressdelivery3.herokuapp.com/api/v1/login", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then(
+        (res) => {
+          if (res.success) {
+            setLoading(false)
+            history.push("/dashboard/dashdefault");
+          } else if (res.failure) {
+          } else if (res.goaway) {
+            setAlert(true);
+            setLoading(false)
+          }
         },
-      })
-        .then((response) => response.json())
-        .then((responseData) => {
-            alert("Signup Successful");
-            history.push("/newlogin");
-          },
-          (err) => console.log(err)
-        );
-    } else {
-      alert("Password Do not match");
-      setLoader(false);
-    }
+        (err) => console.log(err)
+      );
   };
 
   return (
@@ -64,8 +62,18 @@ function Signup() {
             </div>
             <main className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
               <div className="w-full">
+                {alert ? (
+                  <Alerts
+                    text="User Does not Exist"
+                    className="text-center text-black font-bold "
+                    type="danger"
+                    onClose={() => setAlert(false)}
+                  />
+                ) : (
+                  <></>
+                )}
                 <h1 className="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
-                  Create account
+                  Login
                 </h1>
                 <Label>
                   <span>Email</span>
@@ -77,50 +85,34 @@ function Signup() {
                     onChange={updateValues}
                   />
                 </Label>
-                <Label>
-                  <span>Fullname</span>
-                  <Input
-                    className="mt-1"
-                    type="text"
-                    placeholder="John Doe"
-                    name="fullname"
-                    onChange={updateValues}
-                  />
-                </Label>
 
                 <Label className="mt-4">
                   <span>Password</span>
                   <Input
                     className="mt-1"
-                    placeholder="***************"
                     type="password"
+                    placeholder="***************"
                     name="password"
                     onChange={updateValues}
                   />
                 </Label>
 
-                <Label className="mt-4">
-                  <span>Confirm password</span>
-                  <Input
-                    className="mt-1"
-                    placeholder="***************"
-                    type="password"
-                    name="cpassword"
-                    onChange={updateValues}
-                  />
-                </Label>
-
-                <Label className="mt-6" check>
-                  <Input type="checkbox" />
-                  <span className="ml-2">
-                    I agree to the{" "}
-                    <span className="underline">privacy policy</span>
-                  </span>
-                </Label>
-
-                <Button onClick={submit} block className="mt-4">
-                  Create account
+                <Button
+                  className="mt-4"
+                  block
+                  underline="none"
+                  onClick={submit}
+                >
+                  Log in
                 </Button>
+                { loading ?(<LoaderComp
+                  className="mx-48 my-2 md:mx-36"
+                  type="Circles"
+                  color="grey"
+                  height="30"
+                  width="30"
+                  timeout="500000"
+                />) : (<></>)}
 
                 <hr className="my-8" />
 
@@ -128,17 +120,25 @@ function Signup() {
                   <GithubIcon className="w-4 h-4 mr-2" aria-hidden="true" />
                   Github
                 </Button>
-                <Button block className="mt-4" layout="outline">
+                <Button className="mt-4" block layout="outline">
                   <TwitterIcon className="w-4 h-4 mr-2" aria-hidden="true" />
                   Twitter
                 </Button>
 
                 <p className="mt-4">
                   <Link
-                    className="text-sm font-medium text-green-400 dark:text-green-400 hover:underline"
-                    to="/login"
+                    className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
+                    to="/forgot"
                   >
-                    Already have an account? Login
+                    Forgot your password?
+                  </Link>
+                </p>
+                <p className="mt-1">
+                  <Link
+                    className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
+                    to="/signup"
+                  >
+                    Create account
                   </Link>
                 </p>
               </div>
@@ -146,9 +146,8 @@ function Signup() {
           </div>
         </div>
       </div>
-      {loader ? <SunspotLoaderComponent /> : null}
     </div>
   );
 }
 
-export default Signup;
+export default Login;

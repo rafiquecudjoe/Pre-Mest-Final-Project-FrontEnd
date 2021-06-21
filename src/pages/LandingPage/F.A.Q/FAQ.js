@@ -1,5 +1,5 @@
 import FAQcss from "./FAQ.module.css";
-import Button from "../components/appcomponents/button";
+import Button from "../../../components/appcomponents/button";
 import {useHistory} from "react-router-dom"
 
 const FAQ = () => {
