@@ -31,6 +31,7 @@ function Signup() {
         .then((response) => response.json())
         .then((response) => {
           if (response.success == true) {
+            console.log("Sign up Successful")
             setLoading(false);
             setAlert(true);
             history.push("/login");

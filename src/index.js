@@ -17,7 +17,7 @@ ReactDOM.render(
     <SidebarProvider>
       <BrowserRouter>
         <Suspense fallback={<AppSuspense />}>
-          <Windmill theme={myTheme} usePreferences >
+          <Windmill theme={myTheme} usePreferences>
             <App />
           </Windmill>
         </Suspense>
